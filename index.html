@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Bella Jeri Tour — Passeios e Transfer em Jericoacoara</title>
+<meta name="description" content="Descubra Jericoacoara com a Bella Jeri Tour. Passeios 4x4, buggys, transfer e experiências únicas. Reserve pelo WhatsApp."/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="css/styles.css"/>
+</head>
+<body>
+
+<div class="cur" id="cur"></div>
+<div class="cur-ring" id="ring"></div>
+
+<!-- FLOAT WA -->
+<a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="f-wa" target="_blank" aria-label="WhatsApp">
+  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+
+<!-- MOBILE MENU -->
+<div class="mmenu" id="mm">
+  <button class="mmenu-x" id="mmx">&#10005;</button>
+  <a href="#passeios" onclick="closeMenu()">Passeios</a>
+  <a href="#translados" onclick="closeMenu()">Translados</a>
+  <a href="#hospedagem" onclick="closeMenu()">Hospedagem</a>
+  <a href="#atividades" onclick="closeMenu()">Atividades</a>
+  <a href="#faq" onclick="closeMenu()">FAQ</a>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-in">
+    <a href="#" class="nav-logo">
+      <img src="assets/images/image_02.svg" alt="Bella Jeri Tour" style="height:72px;width:auto;"/>
+    </a>
+    <div class="nav-links">
+      <a href="#passeios">Passeios</a>
+      <a href="#translados">Translados</a>
+      <a href="#hospedagem">Hospedagem</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="nav-wa" target="_blank">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+      WhatsApp
+    </a>
+    <button class="burger" id="burger">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-img"></div>
+  <div class="hero-ov"></div>
+  <div class="hero-fade"></div>
+  <div class="hero-body">
+    <div class="hero-eyebrow">Jericoacoara &middot; Cear&aacute; &middot; Brasil</div>
+    <h1 class="hero-h1">Viva a magia de<br><em>Jericoacoara</em></h1>
+    <p class="hero-sub">Passeios 4x4, transfer e experi&ecirc;ncias &uacute;nicas no para&iacute;so cearense. Atendimento local com quem conhece cada lagoa, duna e p&ocirc;r do sol.</p>
+    <div class="hero-btns">
+      <a href="#passeios" class="btn-prim">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+        Ver passeios
+      </a>
+      <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-ghost" target="_blank">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Falar no WhatsApp
+      </a>
+    </div>
+  </div>
+
+  <div class="scroll-ind">
+    <div class="scroll-box"></div>
+    <span>Explorar</span>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust">
+  <div class="trust-top-fade"></div>
+  <div class="trust-inner">
+    <div class="trust-in">
+      <div class="t-item">
+        <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <strong>Equipe local em Jeri</strong>
+        <span>Guias que nasceram e vivem em Jericoacoara, com conhecimento genuino da regiao</span>
+      </div>
+      <div class="t-item">
+        <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+        <strong>Todos os dias</strong>
+        <span>Atendimento de segunda a domingo, das 7h as 21h, para reservas e suporte</span>
+      </div>
+      <div class="t-item">
+        <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <strong>Grupos e privativos</strong>
+        <span>Passeios compartilhados ou exclusivos para familias, casais e grupos</span>
+      </div>
+      <div class="t-item">
+        <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <strong>Reserva pelo WhatsApp</strong>
+        <span>Sem burocracia. Fale diretamente com nossa equipe e confirme em minutos</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- COMO FUNCIONA -->
+<section class="sec bg-verde" id="como-funciona">
+  <div class="sec-in">
+    <div class="sec-head c rev">
+      <div class="label" style="color:rgba(255,255,255,.55);justify-content:center;display:flex;">Como funciona</div>
+      <h2 class="sec-h" style="color:#fff;">Reserve em 3 passos</h2>
+      <p class="sec-sub" style="color:rgba(255,255,255,.58);">Sem burocracia. Direto no WhatsApp com resposta r&aacute;pida e confirma&ccedil;&atilde;o na hora.</p>
+    </div>
+    <div class="steps">
+      <div class="step rev" style="transition-delay:.08s">
+        <div class="step-n">01</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></div>
+        <h3>Escolha seu roteiro</h3>
+        <p>Navegue pelos passeios e escolha o que combina com seu perfil &mdash; fam&iacute;lia, casal, grupos ou aventura.</p>
+      </div>
+      <div class="step rev" style="transition-delay:.16s">
+        <div class="step-n">02</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Fale com nossa equipe</h3>
+        <p>Clique no bot&atilde;o, envie mensagem e nossa equipe confirma data, hor&aacute;rio e ponto de busca.</p>
+      </div>
+      <div class="step rev" style="transition-delay:.24s">
+        <div class="step-n">03</div>
+        <div class="step-ico"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3>Confirme e embarque</h3>
+        <p>Na hora marcada, nosso 4x4 busca voc&ecirc;. &Eacute; s&oacute; curtir e fazer mem&oacute;rias inesquec&iacute;veis em Jericoacoara!</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PASSEIOS -->
+<section class="sec bg-creme" id="passeios">
+  <div class="sec-in">
+    <div class="sec-head rev">
+      <div class="label">Nossos passeios</div>
+      <h2 class="sec-h">Roteiros para todos os perfis</h2>
+      <p class="sec-sub">Lagoas cristalinas, dunas douradas, mar de esmeralda e p&ocirc;r do sol inesquec&iacute;vel.</p>
+    </div>
+    <div class="cards">
+
+      <!-- LESTE -->
+      <div class="pcard rev" style="transition-delay:.05s">
+        <div class="pcard-img">
+          <img src="assets/images/image_03.jpg" alt="Passeio Leste Jericoacoara"/>
+          <span class="badge">Mais popular</span>
+        </div>
+        <div class="pcard-body">
+          <h3 class="pcard-title">Passeio Leste &mdash; Lagoas e Mar de Esmeralda</h3>
+          <p class="pcard-desc">O favorito de quem visita Jeri. Lagoas de &aacute;gua doce quente, mar de esmeralda e dunas deslumbrantes em 6 horas inesquec&iacute;veis.</p>
+          <div class="chips">
+            <span class="chip">6 horas</span>
+            <span class="chip">Saida pela manha</span>
+            <span class="chip or">Compartilhado</span>
+          </div>
+          <div class="paradas-lbl">Paradas do roteiro</div>
+          <div class="paradas">
+            <span class="parada">Pedra Furada</span>
+            <span class="parada">Arvore da Preguica</span>
+            <span class="parada">Praia do Prea</span>
+            <span class="parada">Buraco Azul</span>
+            <span class="parada">Lagun Beach</span>
+          </div>
+          <div class="pcard-btns">
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Leste." class="btn-card o" target="_blank">Buggy</a>
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Leste." class="btn-card g" target="_blank">4x4 Hilux</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- OESTE -->
+      <div class="pcard rev" style="transition-delay:.1s">
+        <div class="pcard-img">
+          <img src="assets/images/image_04.jpg" alt="Passeio Oeste Jericoacoara"/>
+          <span class="badge or">Por do sol</span>
+        </div>
+        <div class="pcard-body">
+          <h3 class="pcard-title">Passeio Oeste &mdash; Dunas Gigantes e Travessia de Balsa</h3>
+          <p class="pcard-desc">A magia do entardecer em Jericoacoara. Dunas gigantes, travessia de balsa e o p&ocirc;r do sol mais bonito do Cear&aacute;.</p>
+          <div class="chips">
+            <span class="chip">5 horas</span>
+            <span class="chip">Saida pela tarde</span>
+            <span class="chip or">Compartilhado</span>
+          </div>
+          <div class="paradas-lbl">Paradas do roteiro</div>
+          <div class="paradas">
+            <span class="parada">Lagoa Azul</span>
+            <span class="parada">Lagoa do Paraiso</span>
+            <span class="parada">Lagoa do Amancio</span>
+            <span class="parada">Raizes do Mangue</span>
+            <span class="parada">Travessia de Balsa</span>
+          </div>
+          <div class="pcard-btns">
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Oeste." class="btn-card o" target="_blank">Buggy</a>
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Oeste." class="btn-card g" target="_blank">4x4 Hilux</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- BARRINHA -->
+      <div class="pcard rev" style="transition-delay:.15s">
+        <div class="pcard-img">
+          <img src="assets/images/image_05.jpg" alt="Passeio Barrinha de Baixo Jericoacoara"/>
+          <span class="badge gold">Premium</span>
+        </div>
+        <div class="pcard-body">
+          <h3 class="pcard-title">Passeio Barrinha &mdash; O Por do Sol mais Bonito do Ceara</h3>
+          <p class="pcard-desc">O passeio mais completo de Jeri. Dia inteiro explorando dunas, lagoas e o famoso p&ocirc;r do sol na Barrinha de Baixo.</p>
+          <div class="chips">
+            <span class="chip">Dia completo</span>
+            <span class="chip">Manha e tarde</span>
+            <span class="chip or">Compartilhado</span>
+          </div>
+          <div class="paradas-lbl">Paradas do roteiro</div>
+          <div class="paradas">
+            <span class="parada">Dunas da Tatajuba</span>
+            <span class="parada">Toboagua Natural</span>
+            <span class="parada">Lago Grande</span>
+            <span class="parada">Dunas da Barrinha</span>
+            <span class="parada">Barrinha de Baixo</span>
+            <span class="parada">Por do Sol</span>
+          </div>
+          <div class="pcard-btns">
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Barrinha." class="btn-card o" target="_blank">Buggy</a>
+            <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20o%20Passeio%20Barrinha." class="btn-card g" target="_blank">4x4 Hilux</a>
+          </div>
+        </div>
+      </div>
+
+          </div>
+  </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section class="sec bg-branco" id="diferenciais">
+  <div class="sec-in">
+    <div class="sec-head c rev">
+      <div class="label">Por que a Bella Jeri Tour</div>
+      <h2 class="sec-h">Experi&ecirc;ncia local, atendimento diferenciado</h2>
+      <p class="sec-sub">Somos daqui. Conhecemos cada lagoa, duna e p&ocirc;r do sol de Jericoacoara como a palma da m&atilde;o.</p>
+    </div>
+    <div class="difs">
+      <div class="dif rev" style="transition-delay:.05s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+        <h3>Atendimento local</h3>
+        <p>Guias que nasceram e vivem em Jericoacoara. Conhecimento genuino de cada canto da regiao.</p>
+      </div>
+      <div class="dif rev" style="transition-delay:.1s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+        <h3>Suporte pelo WhatsApp</h3>
+        <p>Atendimento rapido e direto pelo WhatsApp. Reservas, duvidas e roteiros em minutos.</p>
+      </div>
+      <div class="dif rev" style="transition-delay:.15s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Roteiros testados</h3>
+        <p>Cada roteiro e cuidadosamente planejado para oferecer a melhor experiencia possivel em Jeri.</p>
+      </div>
+      <div class="dif rev" style="transition-delay:.2s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Veiculo preparado</h3>
+        <p>Hilux, buggys e Jardinheira revisados e equipados para qualquer terreno de Jericoacoara.</p>
+      </div>
+      <div class="dif rev" style="transition-delay:.25s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Preco justo</h3>
+        <p>Sem taxas escondidas. O valor combinado e o final, pago diretamente a nossa equipe.</p>
+      </div>
+      <div class="dif rev" style="transition-delay:.3s">
+        <div class="dif-ico"><svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg></div>
+        <h3>Para todo tipo de grupo</h3>
+        <p>Familias, casais, grupos de amigos. Adaptamos o passeio para que todos aproveitem ao maximo.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSLADOS -->
+<section class="sec bg-areia" id="translados">
+  <div class="sec-in">
+    <div class="sec-head rev">
+      <div class="label">Translados</div>
+      <h2 class="sec-h">Transfer de e para Jericoacoara</h2>
+      <p class="sec-sub">Transporte seguro, confort&aacute;vel e pontual desde Fortaleza, Camocim, Sobral e outras cidades.</p>
+    </div>
+    <div class="tgrid">
+
+      <div class="tcard rev" style="transition-delay:.05s">
+        <div class="tcard-header">
+          <div class="tcard-num">01</div>
+          <div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+          <h3>Fortaleza &harr; Jericoacoara</h3>
+          <div class="tcard-sub">Rota mais comum &middot; ~5 horas de viagem</div>
+          <div class="tcard-route">
+            <div class="tcard-route-pt">Fortaleza</div>
+            <div class="tcard-route-line"></div>
+            <div class="tcard-route-pt">Jeri</div>
+          </div>
+        </div>
+        <div class="tcard-body">
+          <ul class="tcard-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Sa&iacute;da de Fortaleza ou Jericoacoara</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Compartilhado ou privativo</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ponto de embarque combinado</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 4x4 a partir de Pre&aacute;</li>
+          </ul>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20um%20transfer." class="tcard-cta" target="_blank">
+            <span>Reservar transfer</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="tcard rev" style="transition-delay:.1s">
+        <div class="tcard-header">
+          <div class="tcard-num">02</div>
+          <div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <h3>Aeroporto JJD &harr; Jeri</h3>
+          <div class="tcard-sub">Jijoca de Jericoacoara &middot; ~1 hora de trajeto</div>
+          <div class="tcard-route">
+            <div class="tcard-route-pt">JJD</div>
+            <div class="tcard-route-line"></div>
+            <div class="tcard-route-pt">Jeri</div>
+          </div>
+        </div>
+        <div class="tcard-body">
+          <ul class="tcard-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Transfer privativo dispon&iacute;vel</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Pontual e confort&aacute;vel</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Ve&iacute;culo 4x4 preparado</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Acompanhamento na chegada</li>
+          </ul>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20um%20transfer." class="tcard-cta" target="_blank">
+            <span>Reservar transfer</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="tcard rev" style="transition-delay:.15s">
+        <div class="tcard-header">
+          <div class="tcard-num">03</div>
+          <div class="tcard-ico"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/></svg></div>
+          <h3>Jeri &harr; Fortaleza</h3>
+          <div class="tcard-sub">Retorno &middot; ~5 horas de viagem</div>
+          <div class="tcard-route">
+            <div class="tcard-route-pt">Jeri</div>
+            <div class="tcard-route-line"></div>
+            <div class="tcard-route-pt">Fortaleza</div>
+          </div>
+        </div>
+        <div class="tcard-body">
+          <ul class="tcard-list">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Transfer de volta para Fortaleza</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Compartilhado ou privativo</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Hor&aacute;rio combinado</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Conex&atilde;o com aeroporto</li>
+          </ul>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20um%20transfer." class="tcard-cta" target="_blank">
+            <span>Reservar transfer</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+    <!-- SW4 Box -->
+    <div class="sw4-box">
+      <div class="sw4-txt">
+        <h3>Toyota SW4 &mdash; Conforto e trac&ccedil;&atilde;o para chegar com estilo</h3>
+        <p>Nossa frota conta com Toyota SW4, Hilux e buggys revisados para garantir seguran&ccedil;a e conforto em qualquer terreno de Jericoacoara. A Jardinheira 4x4 &eacute; a op&ccedil;&atilde;o ideal para fam&iacute;lias com crian&ccedil;as.</p>
+        <div class="sw4-tags">
+          <span class="sw4-tag">At&eacute; 8 passageiros</span>
+          <span class="sw4-tag">Ar-condicionado</span>
+          <span class="sw4-tag">Tra&ccedil;&atilde;o 4x4</span>
+          <span class="sw4-tag">Revisado</span>
+        </div>
+        <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-prim" target="_blank">Consultar disponibilidade</a>
+      </div>
+      <div class="sw4-img">
+        <img src="assets/images/image_06.png" alt="Toyota SW4 Bella Jeri Tour"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOSPEDAGEM -->
+<section class="sec bg-branco" id="hospedagem">
+  <div class="sec-in">
+    <div class="hosp-layout">
+      <div class="rev-l">
+        <div class="hosp-gallery">
+          <div class="hosp-main" onclick="openLB('assets/images/image_07.avif','Casa do Mangue')">
+            <img src="assets/images/image_07.avif" alt="Casa do Mangue Jericoacoara"/>
+          </div>
+          <div class="hosp-thumb" onclick="openLB('assets/images/image_08.avif','Quarto Casa do Mangue')">
+            <img src="assets/images/image_08.avif" alt="Quarto Casa do Mangue"/>
+          </div>
+          <div class="hosp-thumb" onclick="openLB('assets/images/image_09.jpg','Casa do Mangue Barrinha')">
+            <img src="assets/images/image_09.jpg" alt="Vista Casa do Mangue"/>
+          </div>
+        </div>
+      </div>
+      <div class="rev-r">
+        <div class="label">Hospedagem</div>
+        <h2 class="sec-h">Casa do Mangue &mdash; sua casa em Jericoacoara</h2>
+        <p style="font-size:15px;color:var(--txt2);line-height:1.85;margin-bottom:8px;">Conforto e aconchego no cora&ccedil;&atilde;o de Jericoacoara. Estrutura completa para sua estadia, com acesso f&aacute;cil &agrave;s melhores praias, lagoas e ao p&ocirc;r do sol mais famoso do Brasil.</p>
+        <div class="hosp-amens">
+          <span class="hosp-am">Quartos climatizados</span>
+          <span class="hosp-am">Cafe da manha</span>
+          <span class="hosp-am">Area externa</span>
+          <span class="hosp-am">Banheiro privativo</span>
+          <span class="hosp-am">Wi-Fi</span>
+          <span class="hosp-am">Seguranca 24h</span>
+        </div>
+        <p style="font-size:14px;color:var(--txt2);line-height:1.82;margin-bottom:26px;">Pacotes especiais combinando hospedagem com passeios Bella Jeri Tour. Consulte disponibilidade e valores diretamente com nossa equipe.</p>
+        <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20informacoes%20sobre%20hospedagem%20na%20Casa%20do%20Mangue." class="btn-verde" target="_blank">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Consultar disponibilidade
+        </a>
+        <div class="hosp-plat">
+          <a href="https://www.airbnb.com.au/rooms/52322171?guests=1&adults=1&s=67&unique_share_id=9fa3d6e1-f8e8-4a2a-bc10-62df3c08b3d3" class="hosp-plat-btn airbnb" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12.001 1c-1.655 0-3.189.507-4.456 1.375-.043.025-.086.05-.129.077C5.533 3.68 4.25 5.708 4.25 8.028c0 .862.168 1.682.463 2.44.01.03.018.06.026.09l3.52 9.25c.07.192.259.317.463.317h6.578c.204 0 .393-.125.463-.316l3.52-9.25c.008-.03.017-.06.026-.09.295-.758.462-1.578.462-2.44C19.77 4.163 16.19 1 12.001 1zm0 2c3.19 0 5.769 2.435 5.769 5.028 0 .633-.123 1.232-.339 1.79L12 20.75l-5.43-10.932a4.888 4.888 0 0 1-.339-1.79C6.231 5.435 8.81 3 12 3zm0 2.5c-1.477 0-2.673 1.197-2.673 2.673 0 1.477 1.196 2.673 2.673 2.673 1.477 0 2.673-1.196 2.673-2.673 0-1.476-1.196-2.673-2.673-2.673zm0 1.5c.647 0 1.173.527 1.173 1.173 0 .647-.526 1.173-1.173 1.173S10.827 8.82 10.827 8.173C10.827 7.527 11.353 7 12 7z"/></svg>
+            Ver no Airbnb
+          </a>
+          <a href="https://www.booking.com/hotel/br/casa-do-mangue-acarau.en-gb.html?aid=2062892&label=a1122294878704953540142786150486221182250_AqLzeEtQ&anid=1122294878704953540142786150486221182250" class="hosp-plat-btn booking" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.327 7.293a.747.747 0 0 0-.73-.543H7.403a.75.75 0 0 0 0 1.5h8.36l-1.62 8.707H7.403a.75.75 0 0 0 0 1.5h7.08c.36 0 .67-.257.737-.612l1.8-9.667a.748.748 0 0 0-.693-.885z"/><circle cx="9.75" cy="5.25" r="1.5"/></svg>
+            Ver no Booking
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ATIVIDADES -->
+<section class="sec bg-creme" id="atividades">
+  <div class="sec-in">
+    <div class="sec-head c rev">
+      <div class="label">Al&eacute;m dos passeios</div>
+      <h2 class="sec-h">Atividades indicadas em Jericoacoara</h2>
+      <p class="sec-sub">Complemente sua viagem com as atividades que mais combinam com voc&ecirc;. Indicamos parceiros de confian&ccedil;a e organizamos tudo para sua comodidade.</p>
+    </div>
+    <div class="ativ-pair">
+
+      <div class="ativ-card-big rev" style="transition-delay:.05s">
+        <div class="ativ-card-img">
+          <img src="assets/images/image_10.jpg" alt="Aulas de Kitesurf em Jericoacoara"/>
+          <div class="ativ-card-overlay">
+            <div class="ativ-card-tag">Esporte aqu&aacute;tico</div>
+          </div>
+        </div>
+        <div class="ativ-card-content">
+          <h3>Aulas de Kitesurf</h3>
+          <p>Jericoacoara e a Praia do Pre&aacute; est&atilde;o entre os melhores destinos de kitesurf do mundo. Indicamos escolas parceiras com instrutores certificados, equipamentos de qualidade e turmas para todos os n&iacute;veis &mdash; do iniciante absoluto ao kitesurfista experiente.</p>
+          <ul class="ativ-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Instrutores certificados IKO</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Equipamentos modernos inclusos</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Aulas individuais ou em grupo</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Melhor &eacute;poca: julho a dezembro</li>
+          </ul>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-ativ-big" target="_blank">
+            <span>Consultar indica&ccedil;&atilde;o</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <div class="ativ-card-big rev" style="transition-delay:.1s">
+        <div class="ativ-card-img">
+          <img src="assets/images/image_11.jpg" alt="Aluguel de Quadriciclo e UTV em Jericoacoara"/>
+          <div class="ativ-card-overlay">
+            <div class="ativ-card-tag">Aventura off-road</div>
+          </div>
+        </div>
+        <div class="ativ-card-content">
+          <h3>Aluguel de Quadriciclo e UTV</h3>
+          <p>Para quem busca liberdade e adrenalina, indicamos parceiros confi&aacute;veis para aluguel de quadriciclos e UTVs. Explore as dunas, praias selvagens e lagoas de Jericoacoara no seu pr&oacute;prio ritmo, com seguran&ccedil;a e suporte em caso de necessidade.</p>
+          <ul class="ativ-features">
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Quadriciclos automaticos e UTV</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Aluguel por hora, meio dia ou dia inteiro</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Capacetes e equipamentos de seguran&ccedil;a inclusos</li>
+            <li><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Mapa e sugest&otilde;es de roteiro</li>
+          </ul>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-ativ-big" target="_blank">
+            <span>Consultar indica&ccedil;&atilde;o</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec bg-areia" id="depoimentos">
+  <div class="sec-in">
+    <div class="sec-head c rev">
+      <div class="label">Avalia&ccedil;&otilde;es</div>
+      <h2 class="sec-h">O que nossos clientes dizem</h2>
+    </div>
+    <div class="deps">
+      <div class="dep rev" style="transition-delay:.05s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Experi&ecirc;ncia incr&iacute;vel! O guia conhecia cada lagoa e nos levou pelos lugares mais bonitos. Atendimento impec&aacute;vel do come&ccedil;o ao fim. Jericoacoara &eacute; um sonho!</p>
+        <div class="dep-auth"><div class="dep-av">AC</div><div><div class="dep-name">Ana Carolina</div><div class="dep-loc">S&atilde;o Paulo, SP</div></div></div>
+      </div>
+      <div class="dep rev" style="transition-delay:.1s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Viemos com a fam&iacute;lia e foi tudo perfeito. As crian&ccedil;as amaram a Jardinheira 4x4. Equipe super atenciosa, muito profissional e os roteiros s&atilde;o de tirar o f&ocirc;lego.</p>
+        <div class="dep-auth"><div class="dep-av">PS</div><div><div class="dep-name">Pedro Santiago</div><div class="dep-loc">Bras&iacute;lia, DF</div></div></div>
+      </div>
+      <div class="dep rev" style="transition-delay:.15s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Reservei pelo WhatsApp em minutos. O Passeio Leste foi de outro n&iacute;vel. Lagoas incr&iacute;veis, mar lindo e p&ocirc;r do sol inesquec&iacute;vel. J&aacute; indico para todo mundo!</p>
+        <div class="dep-auth"><div class="dep-av">JA</div><div><div class="dep-name">J&uacute;lia Arcanjo</div><div class="dep-loc">Fortaleza, CE</div></div></div>
+      </div>
+      <div class="dep rev" style="transition-delay:.2s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Transfer de Fortaleza pontualis&iacute;mo e confort&aacute;vel. Chegamos descansados para curtir cada dia em Jeri. Voltarei com certeza pela Bella Jeri Tour!</p>
+        <div class="dep-auth"><div class="dep-av">MR</div><div><div class="dep-name">Marcos Rodrigues</div><div class="dep-loc">Rio de Janeiro, RJ</div></div></div>
+      </div>
+      <div class="dep rev" style="transition-delay:.25s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Passeio privativo para o nosso anivers&aacute;rio. Tudo personalizado, inesquec&iacute;vel. Os guias s&atilde;o simplesmente incr&iacute;veis. Nota 10!</p>
+        <div class="dep-auth"><div class="dep-av">LS</div><div><div class="dep-name">Lara &amp; Samuel</div><div class="dep-loc">Recife, PE</div></div></div>
+      </div>
+      <div class="dep rev" style="transition-delay:.3s">
+        <div class="dep-q">&ldquo;</div>
+        <div class="dep-stars"><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span><span>&#9733;</span></div>
+        <p class="dep-txt">Melhor tour que j&aacute; fiz em Jericoacoara. Guia excelente, ve&iacute;culo em &oacute;timo estado e roteiro bem planejado. Recomendo de olhos fechados!</p>
+        <div class="dep-auth"><div class="dep-av">CF</div><div><div class="dep-name">Camila Fonseca</div><div class="dep-loc">Belo Horizonte, MG</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec bg-creme" id="faq">
+  <div class="sec-in">
+    <div class="faq-layout">
+      <div class="rev-l">
+        <div class="label">D&uacute;vidas frequentes</div>
+        <h2 class="sec-h" style="margin-bottom:40px;">Perguntas<br>frequentes</h2>
+        <div class="faq-list">
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">Como funciona a reserva?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Simples: escolha o passeio, clique no bot&atilde;o e envie mensagem para o WhatsApp da Bella Jeri Tour. Um atendente confirma a data, hor&aacute;rio e ponto de busca.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">Quais formas de pagamento s&atilde;o aceitas?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Pix, transfer&ecirc;ncia banc&aacute;ria e dinheiro. Consulte nossa equipe pelo WhatsApp para confirmar as op&ccedil;&otilde;es dispon&iacute;veis na sua data.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">O passeio depende da mar&eacute;?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Alguns roteiros, como o Transfer Via Praias, dependem da mar&eacute;. Nossa equipe sempre orienta sobre o melhor hor&aacute;rio conforme as condi&ccedil;&otilde;es do dia.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">O que est&aacute; incluso no passeio?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Transporte no ve&iacute;culo 4x4 ou buggy, guia e todas as paradas do roteiro. Alimenta&ccedil;&atilde;o, entradas e passeios opcionais s&atilde;o pagos &agrave; parte.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">Crian&ccedil;as podem participar?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Sim! A Jardinheira 4x4 &eacute; ideal para fam&iacute;lias com crian&ccedil;as, por ser mais est&aacute;vel e confort&aacute;vel. Informe a idade ao reservar.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">Como funciona o transfer de Fortaleza?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">A viagem dura cerca de 5 horas. Compartilhado ou privativo. O ponto de embarque &eacute; combinado com nossa equipe pelo WhatsApp.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">De onde sai o passeio?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Os passeios saem da vila de Jericoacoara. Se voc&ecirc; precisar de translado at&eacute; Jeri, temos essa op&ccedil;&atilde;o dispon&iacute;vel.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">Voc&ecirc;s ajudam a montar roteiro?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Sim! Nossa equipe conhece Jeri de ponta a ponta e monta o roteiro ideal conforme seus dias dispon&iacute;veis, interesses e perfil de grupo.</div>
+          </div>
+          <div class="faq-item">
+            <button class="faq-btn" onclick="tFaq(this)"><span class="faq-q">H&aacute; op&ccedil;&atilde;o de passeio privativo?</span><div class="faq-ico">+</div></button>
+            <div class="faq-a">Sim. Todos os roteiros podem ser feitos de forma privativa &mdash; ideal para casais, fam&iacute;lias e grupos. Consulte valores pelo WhatsApp.</div>
+          </div>
+        </div>
+      </div>
+      <div class="rev-r">
+        <div class="faq-cta">
+          <h3>Ainda tem d&uacute;vidas? Fale com a gente!</h3>
+          <p>Nossa equipe est&aacute; em Jericoacoara e responde r&aacute;pido pelo WhatsApp. Tire todas as d&uacute;vidas e monte seu roteiro perfeito.</p>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-wa" target="_blank">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Falar no WhatsApp agora
+          </a>
+          <div class="faq-note">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+            Atendimento todos os dias, 7h &agrave;s 21h
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA FINAL -->
+<section class="cta-sec">
+  <div class="sec-in rev">
+    <div class="label" style="color:rgba(255,255,255,.5);justify-content:center;display:flex;">Reserve agora</div>
+    <h2 class="cta-h">Planeje sua viagem<br><em>inesquec&iacute;vel a Jeri</em></h2>
+    <p class="cta-sub">Reserve seu passeio, transfer ou hospedagem diretamente com nossa equipe pelo WhatsApp.</p>
+    <div class="cta-btns">
+      <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Quero%20reservar%20um%20passeio%20com%20a%20Bella%20Jeri%20Tour." class="btn-wa" target="_blank" style="margin:0;">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        Reservar pelo WhatsApp
+      </a>
+      <a href="#passeios" class="btn-ghost">Ver todos os passeios</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="foot-in">
+    <div class="foot-top">
+      <div>
+        <div class="f-brand"><img src="assets/images/image_02.svg" alt="Bella Jeri Tour"/></div>
+        <p class="f-tagline">Passeios 4x4, transfer e experi&ecirc;ncias inesquec&iacute;veis em Jericoacoara. Atendimento local e reserva pelo WhatsApp.</p>
+        <div class="f-social">
+          <a href="https://instagram.com/bellajeritour" class="f-soc" target="_blank" title="Instagram">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a>
+          <a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="f-soc" target="_blank" title="WhatsApp">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div class="f-col">
+        <h4>Passeios</h4>
+        <ul>
+          <li><a href="#passeios">Passeio Leste</a></li>
+          <li><a href="#passeios">Passeio Oeste</a></li>
+          <li><a href="#passeios">Passeio Barrinha</a></li>
+          </ul>
+      </div>
+      <div class="f-col">
+        <h4>Servi&ccedil;os</h4>
+        <ul>
+          <li><a href="#translados">Translados</a></li>
+          <li><a href="#hospedagem">Casa do Mangue</a></li>
+          <li><a href="#atividades">Kitesurf</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+        </ul>
+      </div>
+      <div class="f-col">
+        <h4>Informa&ccedil;&otilde;es</h4>
+        <ul>
+          <li><a href="#faq">Perguntas frequentes</a></li>
+          <li><a href="#depoimentos">Avalia&ccedil;&otilde;es</a></li>
+          <li><a href="#como-funciona">Como funciona</a></li>
+          <li><a href="https://wa.me/5588996586244?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Bella%20Jeri%20Tour%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." target="_blank">Contato</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bot">
+      <p>&copy; 2026 Bella Jeri Tour &mdash; Jericoacoara, Cear&aacute;. Todos os direitos reservados.</p>
+      <p>WhatsApp: (88) 99658-6244</p>
+    </div>
+  </div>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb" onclick="closeLB()">
+  <span class="lb-x" onclick="closeLB()">&times;</span>
+  <img id="lb-img" src="" alt=""/>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
