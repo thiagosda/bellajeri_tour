@@ -119,7 +119,7 @@ a{text-decoration:none;color:inherit;}
 }
 .hero-img{
   position:absolute;inset:0;
-  background-image:url('imagens/pedra-furada.jpg');
+  background-image:url('../imagens/pedra-furada.jpg');
   background-size:cover;background-position:center 30%;
   animation:hzoom 18s ease-in-out infinite alternate;
 }
