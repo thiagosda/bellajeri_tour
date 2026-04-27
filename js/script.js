@@ -4,9 +4,15 @@ window.addEventListener('scroll',function(){nav.classList.toggle('on',window.scr
 
 // ── MOBILE MENU ──
 var mm=document.getElementById('mm');
-document.getElementById('burger').addEventListener('click',function(){mm.classList.add('open');});
-document.getElementById('mmx').addEventListener('click',function(){mm.classList.remove('open');});
-function closeMenu(){mm.classList.remove('open');}
+var burger=document.getElementById('burger');
+burger.addEventListener('click',function(){
+  mm.classList.toggle('open');
+  burger.classList.toggle('open');
+});
+function closeMenu(){
+  mm.classList.remove('open');
+  burger.classList.remove('open');
+}
 
 // ── SCROLL REVEAL (IntersectionObserver) ──
 var io=new IntersectionObserver(function(entries){
