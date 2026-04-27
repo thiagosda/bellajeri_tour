@@ -11,12 +11,12 @@ body{font-family:'Inter',system-ui,sans-serif;background:var(--creme);color:var(
 img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 
 /* ── REVEAL ── */
-.rev{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
-.rev.in{opacity:1;transform:none;}
-.rev-l{opacity:0;transform:translateX(-28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
-.rev-l.in{opacity:1;transform:none;}
-.rev-r{opacity:0;transform:translateX(28px);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform .7s cubic-bezier(.16,1,.3,1);}
-.rev-r.in{opacity:1;transform:none;}
+.rev{opacity:0;transform:translateY(30px) scale(0.98);filter:blur(4px);transition:opacity 1s cubic-bezier(.22,1,.36,1),transform 1s cubic-bezier(.22,1,.36,1),filter 1s cubic-bezier(.22,1,.36,1);}
+.rev.in{opacity:1;transform:none;filter:blur(0);}
+.rev-l{opacity:0;transform:translateX(-40px);filter:blur(4px);transition:all 1s cubic-bezier(.22,1,.36,1);}
+.rev-l.in{opacity:1;transform:none;filter:blur(0);}
+.rev-r{opacity:0;transform:translateX(40px);filter:blur(4px);transition:all 1s cubic-bezier(.22,1,.36,1);}
+.rev-r.in{opacity:1;transform:none;filter:blur(0);}
 
 /* ── NAV ── */
 .nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:0 48px;transition:background .35s,box-shadow .35s;}
@@ -50,7 +50,7 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;}
 .hero-img{position:absolute;inset:0;background-image:url('../imagens/pedra-furada.jpg');background-size:cover;background-position:center 30%;will-change:transform;transform:scale(1.08);}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(150deg,rgba(5,15,5,.88) 0%,rgba(10,28,10,.7) 50%,rgba(6,20,6,.42) 100%);}
-.hero-fade{position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,var(--creme),transparent);}
+.hero-fade{position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,var(--verde-esc),transparent);}
 .hero-body{position:relative;z-index:3;max-width:1240px;margin:0 auto;padding:130px 48px 100px;width:100%;}
 .hero-eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:11px;font-weight:600;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.6);margin-bottom:24px;opacity:0;animation:fadeUp .8s .3s ease forwards;}
 .hero-eyebrow::before,.hero-eyebrow::after{content:'';height:1px;width:28px;background:var(--laranja-vv);opacity:.7;}
@@ -120,6 +120,10 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .btn-card{display:flex;align-items:center;justify-content:center;gap:6px;font-size:13px;font-weight:600;padding:11px;border-radius:10px;color:#fff;transition:all .25s;}
 .btn-card.g{background:var(--verde);}.btn-card.g:hover{background:var(--verde-esc);}
 .btn-card.o{background:var(--laranja);}.btn-card.o:hover{background:var(--laranja-vv);}
+.btn-reservar{display:flex;align-items:center;justify-content:space-between;gap:10px;padding:14px 20px;border-radius:50px;background:var(--verde);color:#fff;font-size:14px;font-weight:600;transition:all .3s;}
+.btn-reservar:hover{background:var(--verde-esc);transform:translateY(-2px);box-shadow:0 8px 24px rgba(42,110,42,.3);}
+.btn-reservar svg{transition:transform .3s;}
+.btn-reservar:hover svg{transform:translateX(4px);}
 
 /* ── DIFERENCIAIS ── */
 .difs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
