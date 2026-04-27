@@ -20,9 +20,6 @@ var io=new IntersectionObserver(function(entries){
   appearing.forEach(function(e, idx){
     var el = e.target;
     el.classList.add('in');
-    var baseDelay = parseFloat(el.dataset.delay) || 0;
-    // Add dynamic staggering (0.08s per index in the batch)
-    el.style.transitionDelay = (baseDelay + idx * 0.08) + 's';
     io.unobserve(el);
   });
 },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
