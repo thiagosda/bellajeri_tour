@@ -10,11 +10,14 @@ function closeMenu(){mm.classList.remove('open');}
 
 // ── SCROLL REVEAL (IntersectionObserver) ──
 var io=new IntersectionObserver(function(entries){
-  entries.forEach(function(e){
-    if(e.isIntersecting){
-      e.target.classList.add('in');
-      e.target.style.transitionDelay=e.target.dataset.delay||'0s';
-    }
+  var appearing = entries.filter(function(e){ return e.isIntersecting; });
+  appearing.forEach(function(e, idx){
+    var el = e.target;
+    el.classList.add('in');
+    var baseDelay = parseFloat(el.dataset.delay) || 0;
+    // Add dynamic staggering (0.08s per index in the batch)
+    el.style.transitionDelay = (baseDelay + idx * 0.08) + 's';
+    io.unobserve(el);
   });
 },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(function(el){io.observe(el);});
@@ -86,14 +89,29 @@ document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();})
 
 // ── PARALLAX (lightweight, mobile-safe) ──
 var heroImg=document.querySelector('.hero-img');
-if(heroImg && window.innerWidth>768){
+var frotaImg=document.querySelector('.frota-bg-img img');
+
+if(window.innerWidth>768){
   var ticking=false;
   window.addEventListener('scroll',function(){
     if(!ticking){
       requestAnimationFrame(function(){
         var y=window.scrollY;
-        if(y<window.innerHeight){
+        // Hero Parallax
+        if(heroImg && y<window.innerHeight){
           heroImg.style.transform='scale(1.08) translateY('+y*0.15+'px)';
+        }
+        // Frota Parallax
+        if(frotaImg){
+          var frotaSec = document.querySelector('.frota-sec');
+          if(frotaSec){
+            var rect = frotaSec.getBoundingClientRect();
+            if(rect.top < window.innerHeight && rect.bottom > 0){
+              // Center the movement relative to the section's position
+              var offset = (window.innerHeight - rect.top) * 0.08;
+              frotaImg.style.transform='translateY('+offset+'px)';
+            }
+          }
         }
         ticking=false;
       });
