@@ -175,8 +175,8 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .frota-bg-img{position:absolute;top:50%;right:-2%;transform:translateY(-50%);width:52%;height:80%;display:flex;align-items:center;justify-content:flex-end;pointer-events:none;}
 .frota-bg-img img{width:100%;height:100%;object-fit:contain;object-position:right center;filter:drop-shadow(-20px 16px 40px rgba(0,0,0,.5));animation:fFloat 6s ease-in-out infinite alternate;transition:transform 0.2s cubic-bezier(.16,1,.3,1);}
 @keyframes fFloat{from{transform:translateY(0);}to{transform:translateY(-12px);}}
-.frota-content{position:relative;z-index:2;max-width:1240px;margin:0 auto;padding:88px 48px;display:grid;grid-template-columns:1fr 1fr;align-items:center;min-height:520px;}
-.frota-txt{padding-right:36px;}
+.frota-content{position:relative;z-index:2;max-width:800px;margin:0 auto;padding:88px 48px;text-align:center;}
+.frota-txt{padding-right:0;}
 .frota-txt .label{color:rgba(245,192,64,.7);}
 .frota-txt .sec-h{color:#fff;margin-bottom:18px;}
 .frota-txt>p{font-size:15px;color:rgba(255,255,255,.68);line-height:1.85;margin-bottom:32px;}
@@ -187,7 +187,7 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .frota-feat-ico{width:38px;height:38px;border-radius:8px;background:rgba(245,192,64,.15);border:1px solid rgba(245,192,64,.22);display:flex;align-items:center;justify-content:center;color:#f5c040;flex-shrink:0;}
 .frota-feat strong{display:block;font-size:13.5px;font-weight:700;color:#fff;margin-bottom:3px;}
 .frota-feat span{font-size:12px;color:rgba(255,255,255,.52);line-height:1.6;}
-@media(max-width:900px){.frota-content{grid-template-columns:1fr;min-height:auto;padding:56px 20px 280px;}.frota-txt{padding-right:0;}.frota-bg-img{position:absolute;top:auto;bottom:-16px;right:auto;left:50%;transform:translateX(-50%);width:100%;max-width:420px;height:260px;}.frota-bg-img img{object-position:center bottom;animation:none;}}
+@media(max-width:900px){.frota-content{padding:56px 20px;}.frota-txt{padding-right:0;}}
 
 /* â”€â”€ HOSPEDAGEM â”€â”€ */
 .hosp-layout{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start;}
