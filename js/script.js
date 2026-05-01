@@ -179,3 +179,60 @@ if(window.innerWidth>768){
   },{threshold:0.18});
   lineObs.observe(cfSec);
 })();
+
+// ── VÍDEO KITESURF — NUNCA PARA ──
+(function(){
+  function initKitesurfVideo(){
+    var vid = document.querySelector('.ativ-local-video');
+    if(!vid) return;
+
+    // Garante atributos essenciais
+    vid.muted    = true;
+    vid.loop     = true;
+    vid.autoplay = true;
+    vid.playsInline = true;
+
+    // Tenta dar play imediatamente
+    function forcePlay(){
+      var p = vid.play();
+      if(p && typeof p.catch === 'function'){
+        p.catch(function(){ /* bloqueado pelo browser — IntersectionObserver vai resolver */ });
+      }
+    }
+    forcePlay();
+
+    // Se pausou por qualquer motivo → relança
+    vid.addEventListener('pause', function(){
+      setTimeout(forcePlay, 50);
+    });
+
+    // Backup: quando o loop termina e o browser não retoma
+    vid.addEventListener('ended', function(){
+      vid.currentTime = 0;
+      forcePlay();
+    });
+
+    // Quando o vídeo volta a aparecer na tela → retoma play
+    var visObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if(e.isIntersecting && vid.paused) forcePlay();
+      });
+    }, {threshold: 0.1});
+    visObs.observe(vid);
+
+    // Retry por 3 segundos caso o autoplay tenha sido bloqueado no carregamento
+    var retryCount = 0;
+    var retryTimer = setInterval(function(){
+      if(retryCount++ > 10){ clearInterval(retryTimer); return; }
+      if(vid.paused) forcePlay();
+      else clearInterval(retryTimer);
+    }, 300);
+  }
+
+  // Roda depois do DOM estar pronto
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initKitesurfVideo);
+  } else {
+    initKitesurfVideo();
+  }
+})();
