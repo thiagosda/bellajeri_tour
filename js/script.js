@@ -122,3 +122,60 @@ if(window.innerWidth>768){
     }
   });
 }
+
+// ── CARROSSEL DOS CARDS DE PASSEIO ──
+(function(){
+  document.querySelectorAll('[data-carousel]').forEach(function(wrap){
+    var slides = wrap.querySelectorAll('.carousel-slide');
+    var dots   = wrap.querySelectorAll('.cdot');
+    var prev   = wrap.querySelector('.carousel-prev');
+    var next   = wrap.querySelector('.carousel-next');
+    var current = 0;
+    var total   = slides.length;
+    if(total < 2) return;
+
+    function goTo(idx){
+      slides[current].classList.remove('active');
+      dots[current] && dots[current].classList.remove('active');
+      current = (idx + total) % total;
+      slides[current].classList.add('active');
+      dots[current] && dots[current].classList.add('active');
+    }
+
+    if(prev) prev.addEventListener('click', function(e){ e.stopPropagation(); goTo(current - 1); });
+    if(next) next.addEventListener('click', function(e){ e.stopPropagation(); goTo(current + 1); });
+
+    dots.forEach(function(dot, i){
+      dot.addEventListener('click', function(e){ e.stopPropagation(); goTo(i); });
+    });
+
+    // Auto-play suave a cada 4s quando hover
+    var timer = null;
+    wrap.addEventListener('mouseenter', function(){
+      timer = setInterval(function(){ goTo(current + 1); }, 4000);
+    });
+    wrap.addEventListener('mouseleave', function(){
+      clearInterval(timer);
+    });
+
+    // Swipe touch
+    var touchStartX = 0;
+    wrap.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    wrap.addEventListener('touchend', function(e){
+      var dx = e.changedTouches[0].clientX - touchStartX;
+      if(Math.abs(dx) > 40){ goTo(dx < 0 ? current + 1 : current - 1); }
+    }, {passive:true});
+  });
+})();
+
+// ── LINHA DA TIMELINE (Como Funciona) ──
+(function(){
+  var cfSec = document.querySelector('.cf-section');
+  if(!cfSec) return;
+  var lineObs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.isIntersecting){ cfSec.classList.add('line-in'); lineObs.disconnect(); }
+    });
+  },{threshold:0.18});
+  lineObs.observe(cfSec);
+})();
