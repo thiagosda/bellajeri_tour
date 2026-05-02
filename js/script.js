@@ -149,21 +149,26 @@ if(window.innerWidth>768){
       dot.addEventListener('click', function(e){ e.stopPropagation(); goTo(i); });
     });
 
-    // Auto-play suave a cada 4s quando hover
-    var timer = null;
-    wrap.addEventListener('mouseenter', function(){
-      timer = setInterval(function(){ goTo(current + 1); }, 4000);
-    });
-    wrap.addEventListener('mouseleave', function(){
-      clearInterval(timer);
+    // Auto-play contínuo a cada 3.5s
+    var timer = setInterval(function(){ goTo(current + 1); }, 3500);
+
+    // Pausa no hover para permitir leitura/visualização
+    wrap.addEventListener('mouseenter', function(){ clearInterval(timer); });
+    wrap.addEventListener('mouseleave', function(){ 
+      timer = setInterval(function(){ goTo(current + 1); }, 3500); 
     });
 
     // Swipe touch
     var touchStartX = 0;
-    wrap.addEventListener('touchstart', function(e){ touchStartX = e.changedTouches[0].clientX; }, {passive:true});
+    wrap.addEventListener('touchstart', function(e){ 
+      clearInterval(timer); 
+      touchStartX = e.changedTouches[0].clientX; 
+    }, {passive:true});
+    
     wrap.addEventListener('touchend', function(e){
       var dx = e.changedTouches[0].clientX - touchStartX;
       if(Math.abs(dx) > 40){ goTo(dx < 0 ? current + 1 : current - 1); }
+      timer = setInterval(function(){ goTo(current + 1); }, 3500);
     }, {passive:true});
   });
 })();
