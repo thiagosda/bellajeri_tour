@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="orangeGrad" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#D44E0A"/>
+    </linearGradient>
+    <clipPath id="circle">
+      <circle cx="256" cy="256" r="256"/>
+    </clipPath>
+  </defs>
+
+  <!-- Fundo branco limpo -->
+  <rect width="512" height="512" fill="#ffffff"/>
+
+  <!-- ===== COQUEIRO (folhas verdes) ===== -->
+  <!-- Folha central esquerda -->
+  <ellipse cx="230" cy="105" rx="60" ry="14" fill="#4A7C28" transform="rotate(-35 230 105)"/>
+  <!-- Folha central direita -->
+  <ellipse cx="280" cy="95" rx="65" ry="14" fill="#5A9030" transform="rotate(20 280 95)"/>
+  <!-- Folha esquerda alta -->
+  <ellipse cx="190" cy="88" rx="55" ry="12" fill="#3D6B20" transform="rotate(-60 190 88)"/>
+  <!-- Folha direita alta -->
+  <ellipse cx="310" cy="80" rx="60" ry="12" fill="#5A9030" transform="rotate(45 310 80)"/>
+  <!-- Folha baixa esquerda -->
+  <ellipse cx="195" cy="130" rx="55" ry="11" fill="#3D6B20" transform="rotate(-15 195 130)"/>
+  <!-- Folha baixa direita longa -->
+  <ellipse cx="320" cy="120" rx="65" ry="11" fill="#4A7C28" transform="rotate(30 320 120)"/>
+  <!-- Folhinha topo -->
+  <ellipse cx="248" cy="70" rx="40" ry="10" fill="#5A9030" transform="rotate(-5 248 70)"/>
+
+  <!-- ===== B COM TRONCO DE COQUEIRO ===== -->
+  <!-- Tronco curvado (parte vertical do B) — laranja -->
+  <path d="M 215 155 
+            C 210 230, 205 310, 208 400 
+            L 240 400 
+            C 238 310, 242 230, 248 155 Z"
+        fill="url(#orangeGrad)"/>
+
+  <!-- Curva superior do B -->
+  <path d="M 235 158
+            C 270 150, 320 155, 335 185
+            C 350 215, 345 248, 320 262
+            C 345 270, 358 305, 345 335
+            C 332 368, 285 378, 245 375
+            L 240 400
+            C 248 402, 300 405, 340 390
+            C 385 373, 400 330, 385 290
+            C 375 265, 358 252, 340 245
+            C 362 232, 375 208, 365 178
+            C 352 140, 308 130, 268 135
+            C 258 136, 245 140, 238 148 Z"
+        fill="url(#orangeGrad)"/>
+
+  <!-- Divisória horizontal interna do B -->
+  <path d="M 240 250 L 320 250 C 332 250, 338 258, 335 268 
+            L 240 268 Z"
+        fill="url(#orangeGrad)"/>
+</svg>
