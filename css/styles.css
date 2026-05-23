@@ -242,16 +242,19 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .btn-ativ-big svg{transition:transform .25s;}.btn-ativ-big:hover svg{transform:translateX(3px);}
 
 /* â”€â”€ DEPOIMENTOS â”€â”€ */
-.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;}
+#depoimentos{padding:56px 48px;}
+@media(max-width:768px){#depoimentos{padding:44px 20px;}}
+@media(max-width:480px){#depoimentos{padding:36px 16px;}}
+.deps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;}
 @media(max-width:900px){.deps{grid-template-columns:1fr 1fr;}}
 @media(max-width:560px){.deps{grid-template-columns:1fr;}}
-.dep{background:#fff;border-radius:16px;padding:26px;border:1px solid var(--borda);box-shadow:var(--sombra);transition:transform .3s,box-shadow .3s;}
+.dep{background:#fff;border-radius:14px;padding:18px;border:1px solid var(--borda);box-shadow:var(--sombra);transition:transform .3s,box-shadow .3s;}
 .dep:hover{transform:translateY(-4px);box-shadow:var(--sombra-m);}
-.dep-q{font-family:'Lora',serif;font-size:40px;line-height:1;color:var(--laranja);opacity:.2;margin-bottom:2px;}
-.dep-stars{display:flex;gap:3px;margin-bottom:10px;}.dep-stars span{color:#d4920a;font-size:14px;}
-.dep-txt{font-size:13.5px;color:var(--txt2);line-height:1.82;margin-bottom:18px;font-style:italic;}
+.dep-q{font-family:'Lora',serif;font-size:28px;line-height:1;color:var(--laranja);opacity:.2;margin-bottom:0;}
+.dep-stars{display:flex;gap:3px;margin-bottom:7px;}.dep-stars span{color:#d4920a;font-size:13px;}
+.dep-txt{font-size:12.5px;color:var(--txt2);line-height:1.65;margin-bottom:12px;font-style:italic;}
 .dep-auth{display:flex;align-items:center;gap:10px;}
-.dep-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--verde),var(--laranja));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
+.dep-av{width:34px;height:34px;border-radius:50%;background:linear-gradient(135deg,var(--verde),var(--laranja));display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:700;color:#fff;flex-shrink:0;}
 .dep-name{font-size:13px;font-weight:700;color:var(--txt);}.dep-loc{font-size:11px;color:var(--txt3);margin-top:1px;}
 a.dep{text-decoration:none;color:inherit;display:flex;flex-direction:column;cursor:pointer;}
 .dep-g-badge{font-size:10px;font-weight:700;color:#4285f4;}
