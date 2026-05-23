@@ -185,48 +185,30 @@ if(window.innerWidth>768){
   lineObs.observe(cfSec);
 })();
 
-// ── GOOGLE REVIEWS (Places API) ──
+// ── GOOGLE REVIEWS (Vercel API Route) ──
 (function () {
-  window.initGoogleReviews = function () {
-    var cont = document.getElementById('google-reviews-container');
-    var load = document.getElementById('reviews-loading');
-    if (!cont || typeof google === 'undefined') return;
+  var cont = document.getElementById('google-reviews-container');
+  var load = document.getElementById('reviews-loading');
+  if (!cont) return;
 
-    var svc = new google.maps.places.PlacesService(document.createElement('div'));
-
-    svc.findPlaceFromQuery(
-      { query: 'Bella Jeri Tour Jericoacoara', fields: ['place_id'] },
-      function (res, st) {
-        if (st !== google.maps.places.PlacesServiceStatus.OK || !res || !res.length) {
-          grFallback(cont, load); return;
-        }
-        svc.getDetails(
-          { placeId: res[0].place_id, fields: ['reviews', 'url', 'user_ratings_total', 'rating'], language: 'pt-BR' },
-          function (place, st2) {
-            if (st2 !== google.maps.places.PlacesServiceStatus.OK || !place) {
-              grFallback(cont, load); return;
-            }
-            grRender(place, cont, load);
-          }
-        );
+  fetch('/api/reviews')
+    .then(function (res) { return res.json(); })
+    .then(function (data) {
+      if (data.status !== 'OK' || !data.reviews || !data.reviews.length) {
+        grFallback(); return;
       }
-    );
-  };
+      grRender(data.reviews);
+    })
+    .catch(function () { grFallback(); });
 
-  function grRender(place, cont, load) {
+  function grRender(reviews) {
     if (load) load.remove();
-
-    var reviews = (place.reviews || []).filter(function (r) { return r.text && r.text.trim(); });
-    if (!reviews.length) { grFallback(cont, null); return; }
-
-    // Melhores avaliações primeiro
-    reviews.sort(function (a, b) { return b.rating - a.rating || b.time - a.time; });
 
     var frag = document.createDocumentFragment();
     reviews.forEach(function (r, i) { frag.appendChild(grCard(r, i)); });
     cont.appendChild(frag);
 
-    // Atribuição obrigatória pelos Termos de Uso da API do Google
+    // Atribuição obrigatória pelos Termos de Uso do Google
     var attr = document.createElement('div');
     attr.className = 'gr-attr';
     attr.innerHTML =
@@ -248,22 +230,18 @@ if(window.innerWidth>768){
     card.className = 'dep rev';
     card.style.transitionDelay = (i * 0.09) + 's';
 
-    // Estrelas
     var stars = '';
     for (var s = 1; s <= 5; s++) {
-      stars += '<span style="color:' + (s <= r.rating ? '#d4920a' : '#dce0d8') + '">★</span>';
+      stars += '<span style="color:' + (s <= r.rating ? '#d4920a' : '#dce0d8') + '">&#9733;</span>';
     }
 
-    // Texto truncado
     var txt = (r.text || '').trim();
     if (txt.length > 320) txt = txt.slice(0, 320) + '\u2026';
 
-    // Iniciais para avatar de fallback
     var inits = (r.author_name || '?')
       .split(/\s+/).filter(Boolean).slice(0, 2)
       .map(function (n) { return n[0].toUpperCase(); }).join('');
 
-    // Avatar: foto do Google ou iniciais
     var errH = "this.style.display='none';this.nextSibling.style.display='flex';";
     var avHTML = r.profile_photo_url
       ? '<img src="' + r.profile_photo_url + '" alt="" class="dep-av-img" onerror="' + errH + '">' +
@@ -284,11 +262,10 @@ if(window.innerWidth>768){
           '</div>' +
         '</div>' +
       '</div>';
-
     return card;
   }
 
-  function grFallback(cont, load) {
+  function grFallback() {
     if (load) load.remove();
     var fb = document.createElement('div');
     fb.className = 'gr-fallback';
