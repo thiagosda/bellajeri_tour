@@ -1,3 +1,6 @@
+// ── CARROSSEL REVIEWS ──
+function depScroll(dir){var el=document.getElementById('deps-scroll');if(el)el.scrollBy({left:dir*316,behavior:'smooth'});}
+
 // ── NAV SCROLL ──
 var nav=document.getElementById('nav');
 window.addEventListener('scroll',function(){nav.classList.toggle('on',window.scrollY>60);});
