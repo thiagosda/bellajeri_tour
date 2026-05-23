@@ -1,5 +1,15 @@
 // ── CARROSSEL REVIEWS ──
 function depScroll(dir){var el=document.getElementById('deps-scroll');if(el)el.scrollBy({left:dir*316,behavior:'smooth'});}
+(function(){
+  var sc=document.getElementById('deps-scroll');
+  var dots=document.querySelectorAll('.dep-dot');
+  if(!sc||!dots.length)return;
+  dots.forEach(function(d,i){d.addEventListener('click',function(){sc.scrollTo({left:i*316,behavior:'smooth'});});});
+  sc.addEventListener('scroll',function(){
+    var idx=Math.round(sc.scrollLeft/316);
+    dots.forEach(function(d,i){d.classList.toggle('active',i===idx);});
+  });
+})();
 
 // ── NAV SCROLL ──
 var nav=document.getElementById('nav');
