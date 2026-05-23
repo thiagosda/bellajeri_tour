@@ -1,34 +1,20 @@
 export default async function handler(req, res) {
-  // CORS — permite apenas o próprio domínio
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
   const API_KEY = process.env.GOOGLE_PLACES_KEY || 'AIzaSyAYjdUoXKZ0lRJoe5rVSbGiyyiMp0b8zSo';
-  const QUERY   = 'Bella Jeri Tour Jericoacoara';
+
+  // Place ID exato da BellaJeri Tour — extraído de:
+  // https://maps.app.goo.gl/P4reX7EVpGpVALyJA
+  // hex: 0xa6814d67fc0690bf : 0x7f1937a6bf834f06
+  const PLACE_ID  = 'ChIJv5AGfGfRhjsRBk-Dv6Y3GX8';
+  const MAPS_URL  = 'https://maps.app.goo.gl/P4reX7EVpGpVALyJA';
 
   try {
-    // Passo 1: busca o place_id pelo nome
-    const findUrl =
-      `https://maps.googleapis.com/maps/api/place/findplacefromtext/json` +
-      `?input=${encodeURIComponent(QUERY)}` +
-      `&inputtype=textquery` +
-      `&fields=place_id` +
-      `&key=${API_KEY}`;
-
-    const findResp = await fetch(findUrl);
-    const findData = await findResp.json();
-
-    if (findData.status !== 'OK' || !findData.candidates || !findData.candidates.length) {
-      return res.status(200).json({ status: findData.status, reviews: [] });
-    }
-
-    const placeId = findData.candidates[0].place_id;
-
-    // Passo 2: busca os detalhes com reviews
     const detailUrl =
       `https://maps.googleapis.com/maps/api/place/details/json` +
-      `?place_id=${placeId}` +
-      `&fields=name,rating,user_ratings_total,reviews,url` +
+      `?place_id=${PLACE_ID}` +
+      `&fields=name,rating,user_ratings_total,reviews` +
       `&language=pt-BR` +
       `&reviews_sort=most_relevant` +
       `&key=${API_KEY}`;
@@ -36,27 +22,67 @@ export default async function handler(req, res) {
     const detailResp = await fetch(detailUrl);
     const detailData = await detailResp.json();
 
+    // Se o Place ID hardcoded falhar, tenta busca por nome como fallback
     if (detailData.status !== 'OK' || !detailData.result) {
-      return res.status(200).json({ status: detailData.status, reviews: [] });
+      const findUrl =
+        `https://maps.googleapis.com/maps/api/place/findplacefromtext/json` +
+        `?input=${encodeURIComponent('BellaJeri Tour Jericoacoara')}` +
+        `&inputtype=textquery` +
+        `&fields=place_id` +
+        `&key=${API_KEY}`;
+
+      const findResp = await fetch(findUrl);
+      const findData = await findResp.json();
+
+      if (findData.status !== 'OK' || !findData.candidates || !findData.candidates.length) {
+        return res.status(200).json({ status: findData.status || detailData.status, reviews: [], url: MAPS_URL });
+      }
+
+      const fallbackId = findData.candidates[0].place_id;
+      const fbDetailUrl =
+        `https://maps.googleapis.com/maps/api/place/details/json` +
+        `?place_id=${fallbackId}` +
+        `&fields=name,rating,user_ratings_total,reviews` +
+        `&language=pt-BR` +
+        `&reviews_sort=most_relevant` +
+        `&key=${API_KEY}`;
+
+      const fbResp = await fetch(fbDetailUrl);
+      const fbData = await fbResp.json();
+
+      if (fbData.status !== 'OK' || !fbData.result) {
+        return res.status(200).json({ status: fbData.status, reviews: [], url: MAPS_URL });
+      }
+
+      const reviews = (fbData.result.reviews || [])
+        .filter(r => r.text && r.text.trim())
+        .sort((a, b) => b.rating - a.rating || b.time - a.time);
+
+      res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
+      return res.status(200).json({
+        status: 'OK',
+        rating: fbData.result.rating,
+        total: fbData.result.user_ratings_total,
+        url: MAPS_URL,
+        reviews
+      });
     }
 
     const reviews = (detailData.result.reviews || [])
       .filter(r => r.text && r.text.trim())
       .sort((a, b) => b.rating - a.rating || b.time - a.time);
 
-    // Cache de 6 horas no Vercel Edge
     res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
-
     return res.status(200).json({
       status: 'OK',
       rating: detailData.result.rating,
       total: detailData.result.user_ratings_total,
-      url: detailData.result.url,
+      url: MAPS_URL,
       reviews
     });
 
   } catch (err) {
     console.error('[api/reviews] Erro:', err);
-    return res.status(500).json({ status: 'ERROR', reviews: [] });
+    return res.status(500).json({ status: 'ERROR', reviews: [], url: MAPS_URL });
   }
 }
