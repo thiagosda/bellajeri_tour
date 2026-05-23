@@ -2,12 +2,10 @@ export default async function handler(req, res) {
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET');
 
-  const API_KEY = process.env.GOOGLE_PLACES_KEY || 'AIzaSyAYjdUoXKZ0lRJoe5rVSbGiyyiMp0b8zSo';
+  const API_KEY = process.env.GOOGLE_PLACES_KEY || 'AIzaSyDoYMcAlDi00Z38uiKZEhHRMyX4svs0EK4';
 
-  // Place ID exato da BellaJeri Tour — extraído de:
-  // https://maps.app.goo.gl/P4reX7EVpGpVALyJA
-  // hex: 0xa6814d67fc0690bf : 0x7f1937a6bf834f06
-  const PLACE_ID  = 'ChIJv5AGfGfRhjsRBk-Dv6Y3GX8';
+  // Place ID da BellaJeri Tour — obter em: https://developers.google.com/maps/documentation/javascript/examples/places-placeid-finder
+  const PLACE_ID  = 'PLACE_ID_PENDENTE';
   const MAPS_URL  = 'https://maps.app.goo.gl/P4reX7EVpGpVALyJA';
 
   try {

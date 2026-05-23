@@ -253,6 +253,9 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .dep-auth{display:flex;align-items:center;gap:10px;}
 .dep-av{width:38px;height:38px;border-radius:50%;background:linear-gradient(135deg,var(--verde),var(--laranja));display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;}
 .dep-name{font-size:13px;font-weight:700;color:var(--txt);}.dep-loc{font-size:11px;color:var(--txt3);margin-top:1px;}
+.maps-embed-wrap{width:100%;border-radius:20px;overflow:hidden;box-shadow:var(--sombra-m);margin-top:8px;}
+.maps-embed-wrap iframe{width:100%;height:520px;border:0;display:block;}
+@media(max-width:600px){.maps-embed-wrap iframe{height:420px;}}
 
 /* â”€â”€ FAQ â”€â”€ */
 .faq-layout{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
