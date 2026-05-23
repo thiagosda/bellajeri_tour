@@ -55,10 +55,10 @@ export default async function handler(req, res) {
       }
 
       const reviews = (fbData.result.reviews || [])
-        .filter(r => r.text && r.text.trim())
-        .sort((a, b) => b.rating - a.rating || b.time - a.time);
+        .filter(r => r.text && r.text.trim() && r.rating === 5)
+        .sort((a, b) => b.time - a.time);
 
-      res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
+      res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
       return res.status(200).json({
         status: 'OK',
         rating: fbData.result.rating,
@@ -69,10 +69,10 @@ export default async function handler(req, res) {
     }
 
     const reviews = (detailData.result.reviews || [])
-      .filter(r => r.text && r.text.trim())
-      .sort((a, b) => b.rating - a.rating || b.time - a.time);
+      .filter(r => r.text && r.text.trim() && r.rating === 5)
+      .sort((a, b) => b.time - a.time);
 
-    res.setHeader('Cache-Control', 's-maxage=21600, stale-while-revalidate');
+    res.setHeader('Cache-Control', 's-maxage=3600, stale-while-revalidate');
     return res.status(200).json({
       status: 'OK',
       rating: detailData.result.rating,
