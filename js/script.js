@@ -255,3 +255,36 @@ if(window.innerWidth>768){
     initKitesurfVideo();
   }
 })();
+
+// ── GOOGLE ADS — Evento de conversão Lead WhatsApp ──
+// Dispara somente em cliques em links de WhatsApp (wa.me / api.whatsapp.com / web.whatsapp.com).
+// Não duplica a tag principal AW-18276743148, que já está no <head>.
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-18276743148/xEvECN7n0MYcEOzvg4tE',
+      'event_callback': callback
+  });
+  return false;
+}
+
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a');
+
+  if (!link) return;
+
+  var href = link.href || '';
+
+  if (
+    href.includes('wa.me') ||
+    href.includes('api.whatsapp.com') ||
+    href.includes('web.whatsapp.com')
+  ) {
+    e.preventDefault();
+    gtag_report_conversion(href);
+  }
+});
