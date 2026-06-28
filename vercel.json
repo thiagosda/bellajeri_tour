@@ -1,0 +1,9 @@
+{
+  "rewrites": [
+    { "source": "/transfer-fortaleza-jericoacoara", "destination": "/transfer-fortaleza-jericoacoara.html" },
+    { "source": "/passeios-em-jericoacoara",         "destination": "/passeios-em-jericoacoara.html"         },
+    { "source": "/passeio-leste-jericoacoara",       "destination": "/passeio-leste-jericoacoara.html"       },
+    { "source": "/passeio-oeste-jericoacoara",       "destination": "/passeio-oeste-jericoacoara.html"       },
+    { "source": "/passeio-barrinha-jericoacoara",    "destination": "/passeio-barrinha-jericoacoara.html"    }
+  ]
+}

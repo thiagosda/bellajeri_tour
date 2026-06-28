@@ -1,0 +1,750 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Mangue 4x4 â€” Passeios e Transfer em Jericoacoara</title>
+<meta name="description" content="Passeios 4x4, transfer e experiÃªncias em Jericoacoara. Atendimento local, roteiros completos e reserva pelo WhatsApp. Mangue 4x4."/>
+<meta property="og:title" content="Mangue 4x4 â€” Passeios e Transfer em Jericoacoara"/>
+<meta property="og:description" content="Passeios 4x4, transfer e rotas em Jericoacoara. Atendimento direto pelo WhatsApp."/>
+<meta property="og:type" content="website"/>
+<style>
+/* â”€â”€â”€ RESET â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:'Segoe UI',system-ui,-apple-system,sans-serif;background:#fff;color:#1a2e24;line-height:1.65;-webkit-font-smoothing:antialiased;}
+img{display:block;max-width:100%;}
+a{text-decoration:none;color:inherit;}
+
+/* â”€â”€â”€ TOKENS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+:root{
+  --g:#1b6b45;--gd:#134f33;--gl:#eef7f2;--gm:#2d8a5e;
+  --t:#1a8fa0;--tl:#e2f4f7;
+  --sand:#f6f2eb;--offwhite:#f8faf8;
+  --txt:#1a2e24;--txt2:#4a6557;--txt3:#8aa896;
+  --border:#d6e8dc;
+  --r:10px;--rl:14px;
+  --sh:0 1px 8px rgba(0,0,0,.06);
+  --shm:0 4px 20px rgba(0,0,0,.1);
+}
+
+/* â”€â”€â”€ BUTTONS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.btn-g{display:inline-flex;align-items:center;gap:8px;background:var(--g);color:#fff!important;font-size:15px;font-weight:700;padding:13px 26px;border-radius:8px;transition:background .15s,transform .12s;white-space:nowrap;}
+.btn-g:hover{background:var(--gd);transform:translateY(-1px);}
+.btn-g span{color:#fff!important;}
+.btn-o{display:inline-flex;align-items:center;gap:8px;background:transparent;color:var(--g)!important;font-size:15px;font-weight:700;padding:12px 26px;border-radius:8px;border:2px solid var(--g);transition:all .15s;white-space:nowrap;}
+.btn-o:hover{background:var(--g);color:#fff!important;}
+.btn-w{display:inline-flex;align-items:center;gap:8px;background:#fff;color:var(--gd)!important;font-size:15px;font-weight:700;padding:13px 28px;border-radius:8px;transition:background .15s;white-space:nowrap;box-shadow:0 2px 8px rgba(0,0,0,.12);}
+.btn-w:hover{background:#f0f0f0;}
+.btn-w span{color:var(--gd)!important;}
+.btn-sm{font-size:13px!important;padding:9px 18px!important;}
+.btn-ghost-w{display:inline-flex;align-items:center;gap:6px;color:rgba(255,255,255,.88);font-size:15px;font-weight:600;border:1.5px solid rgba(255,255,255,.4);padding:12px 24px;border-radius:8px;transition:all .15s;}
+.btn-ghost-w:hover{background:rgba(255,255,255,.12);color:#fff;}
+
+/* â”€â”€â”€ NAV â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.nav{position:sticky;top:0;z-index:200;background:rgba(255,255,255,.98);backdrop-filter:blur(16px);border-bottom:2px solid var(--border);box-shadow:0 2px 16px rgba(0,90,31,.07);}
+.nav-in{max-width:100%;margin:0 auto;height:120px;display:flex;align-items:center;justify-content:space-between;padding:0 40px;gap:24px;}
+.nav-logo{display:flex;align-items:center;flex-shrink:0;}
+.nav-links{display:flex;align-items:center;gap:4px;flex:1;justify-content:center;}
+.nav-links a{font-size:15px;font-weight:700;color:var(--txt2);padding:8px 16px;border-radius:8px;transition:all .2s;position:relative;letter-spacing:.01em;}
+.nav-links a::after{content:'';position:absolute;bottom:2px;left:16px;right:16px;height:2px;background:var(--g);border-radius:2px;transform:scaleX(0);transition:transform .2s;}
+.nav-links a:hover{color:var(--g);background:var(--gl);}
+.nav-links a:hover::after{transform:scaleX(1);}
+.nav-links a.active{color:var(--g);background:var(--gl);}
+.nav-links a.active::after{transform:scaleX(1);}
+.nav-wa{display:flex;align-items:center;gap:8px;background:#25d366;color:#fff;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;text-decoration:none;transition:all .2s;flex-shrink:0;white-space:nowrap;}
+.nav-wa:hover{background:#1ebe5d;transform:translateY(-1px);box-shadow:0 4px 12px rgba(37,211,102,.3);}
+.nav-wa svg{flex-shrink:0;}
+@media(max-width:900px){.nav-wa span{display:none;} .nav-wa{padding:10px 12px;}}
+@media(max-width:800px){.nav-links{display:none;} .nav-in{justify-content:center;} .nav-wa{position:absolute;right:16px;top:50%;transform:translateY(-50%);}}
+@media(max-width:460px){.nav-in{padding:0 16px;height:100px;} .btn-g{font-size:13px;padding:10px 16px;}}
+
+/* â”€â”€â”€ HERO â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;overflow:hidden;}
+.hero-bg{position:absolute;inset:0;}
+.hero-bg img{width:100%;height:100%;object-fit:cover;}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(145deg,rgba(8,32,18,.88) 0%,rgba(12,44,24,.65) 55%,rgba(8,35,20,.4) 100%);}
+.hero-in{position:relative;z-index:2;max-width:1100px;margin:0 auto;padding:100px 24px 80px;width:100%;}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:22px;}
+.hero-tag::before{content:"";width:24px;height:2px;background:var(--gm);display:block;}
+.hero h1{font-size:clamp(36px,5.5vw,60px);font-weight:900;color:#fff;line-height:1.08;margin-bottom:6px;max-width:660px;}
+.hero-brand{font-size:clamp(36px,5.5vw,60px);font-weight:900;color:#7de8b0;line-height:1.08;margin-bottom:20px;}
+.hero-sub{font-size:clamp(15px,1.8vw,18px);color:rgba(255,255,255,.78);line-height:1.75;max-width:480px;margin-bottom:36px;}
+.hero-btns{display:flex;gap:12px;flex-wrap:wrap;}
+
+/* â”€â”€â”€ TRUST STRIP â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.trust{background:var(--gd);padding:14px 24px;}
+.trust-in{max-width:1100px;margin:0 auto;display:flex;justify-content:center;align-items:center;gap:clamp(16px,4vw,48px);flex-wrap:wrap;}
+.trust-item{display:flex;align-items:center;gap:8px;color:#fff;}
+.trust-item svg{opacity:.7;flex-shrink:0;}
+.trust-item strong{font-size:13px;font-weight:700;}
+.trust-item span{font-size:12px;opacity:.65;}
+.trust-sep{width:1px;height:20px;background:rgba(255,255,255,.18);}
+@media(max-width:600px){.trust-sep{display:none;}}
+
+/* â”€â”€â”€ SECTION â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.sec{padding:72px 24px;}
+.sec-in{max-width:1100px;margin:0 auto;}
+.sec-label{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.15em;text-transform:uppercase;color:var(--g);border:1.5px solid var(--border);padding:4px 12px;border-radius:4px;margin-bottom:14px;}
+.sec-title{font-size:clamp(24px,3.2vw,36px);font-weight:900;color:var(--txt);line-height:1.15;margin-bottom:10px;}
+.sec-sub{font-size:16px;color:var(--txt2);line-height:1.75;max-width:540px;}
+.sec-head{margin-bottom:44px;}
+.sec-head.c{text-align:center;}.sec-head.c .sec-sub{margin:0 auto;}
+.bar{width:40px;height:3px;background:var(--g);border-radius:2px;margin:14px 0;}
+.bg-off{background:var(--offwhite);}
+.bg-sand{background:var(--sand);}
+.bg-dark{background:var(--gd);}
+.bg-teal{background:var(--t);}
+
+/* â”€â”€â”€ COMO FUNCIONA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.steps-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:0;background:var(--border);border-radius:var(--rl);overflow:hidden;border:1px solid var(--border);}
+.step{background:#fff;padding:36px 28px;position:relative;}
+.step-n{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--g);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
+.step-n::before{content:"";width:16px;height:2px;background:var(--g);}
+.step h3{font-size:17px;font-weight:800;color:var(--txt);margin-bottom:8px;}
+.step p{font-size:14px;color:var(--txt2);line-height:1.7;}
+
+/* â”€â”€â”€ PASSEIOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.pgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:24px;}
+.pcard{background:#fff;border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh);transition:transform .2s,box-shadow .2s;border:1px solid var(--border);}
+.pcard:hover{transform:translateY(-4px);box-shadow:var(--shm);}
+.pcard-img{position:relative;overflow:hidden;}
+.pcard:hover .pcard-img img{transform:scale(1.05);}
+.pcard-selo{position:absolute;top:12px;left:12px;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:4px 11px;border-radius:4px;background:var(--gd);color:#fff;}
+.pcard-selo.teal{background:var(--t);}
+.pcard-selo.amber{background:#b07a10;}
+.pcard-body{padding:22px;}
+.pcard-body h3{font-size:18px;font-weight:800;color:var(--txt);margin-bottom:7px;line-height:1.3;}
+.pcard-desc{font-size:14px;color:var(--txt2);line-height:1.7;margin-bottom:14px;}
+.pcard-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+.pcard-meta span{display:inline-flex;align-items:center;gap:5px;font-size:12px;font-weight:600;color:var(--txt2);background:var(--gl);padding:4px 10px;border-radius:4px;}
+.pcard-meta svg{color:var(--g);}
+.paradas-label{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--txt3);margin-bottom:8px;}
+.paradas-wrap{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:18px;}
+.parada{font-size:12px;color:var(--txt);background:var(--offwhite);border:1px solid var(--border);padding:3px 10px;border-radius:4px;}
+.v-choice{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.v-btn-buggy,.v-btn-hilux{display:flex;align-items:center;justify-content:center;gap:6px;font-size:12px;font-weight:700;padding:10px 8px;border-radius:6px;color:#fff!important;transition:opacity .15s;}
+.v-btn-buggy span,.v-btn-hilux span{font-weight:400;opacity:.75;font-size:11px;}
+.v-btn-buggy{background:#9a6800;}
+.v-btn-buggy:hover{background:#7d5400;}
+.v-btn-hilux{background:var(--g);}
+.v-btn-hilux:hover{background:var(--gd);}
+@media(max-width:400px){.v-choice{grid-template-columns:1fr;}}
+
+/* â”€â”€â”€ DIFERENCIAIS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);border-radius:var(--rl);overflow:hidden;border:1px solid var(--border);}@media(max-width:860px){.dif-grid{grid-template-columns:repeat(2,1fr);}}@media(max-width:480px){.dif-grid{grid-template-columns:1fr;}}
+.dif{background:#fff;padding:30px 24px;}
+.dif-ic{width:40px;height:40px;border-radius:8px;background:var(--gl);display:flex;align-items:center;justify-content:center;margin-bottom:14px;color:var(--g);}
+.dif h3{font-size:15px;font-weight:800;color:var(--txt);margin-bottom:6px;}
+.dif p{font-size:13px;color:var(--txt2);line-height:1.65;}
+
+/* â”€â”€â”€ TRANSLADOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.t-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;}
+.tcard{background:#fff;border-radius:var(--rl);overflow:hidden;border:1px solid var(--border);box-shadow:var(--sh);}
+.tcard-head{padding:20px 22px 16px;border-bottom:1px solid var(--border);}
+.tcard-head h3{font-size:16px;font-weight:800;color:var(--txt);margin-bottom:3px;}
+.tcard-head p{font-size:12px;color:var(--txt3);}
+.tcard-body{padding:20px 22px;}
+.tcard-list{list-style:none;margin-bottom:20px;}
+.tcard-list li{font-size:13px;color:var(--txt2);padding:6px 0;border-bottom:1px solid var(--gl);display:flex;align-items:center;gap:8px;}
+.tcard-list li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0;}
+
+/* â”€â”€â”€ SW4 HIGHLIGHT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.sw4-box{display:flex;gap:36px;align-items:center;flex-wrap:wrap;margin-top:40px;background:var(--gd);border-radius:var(--rl);padding:36px;color:#fff;}
+.sw4-txt{flex:1;min-width:240px;}
+.sw4-txt h3{font-size:22px;font-weight:900;margin-bottom:10px;}
+.sw4-txt p{font-size:14px;opacity:.78;line-height:1.75;margin-bottom:18px;}
+.sw4-tags{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:22px;}
+.sw4-tag{font-size:12px;font-weight:600;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#fff;padding:5px 12px;border-radius:4px;}
+.sw4-img-wrap{flex:1;min-width:240px;}
+.sw4-img-wrap img{width:100%;height:260px;object-fit:cover;border-radius:10px;display:block;}
+
+/* â”€â”€â”€ KITESURF â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.kgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px;}
+.kcard{background:#fff;border-radius:var(--rl);overflow:hidden;box-shadow:var(--sh);transition:transform .2s;}
+.kcard:hover{transform:translateY(-3px);}
+.kcard-body{padding:20px;}
+.kcard-nivel{display:inline-block;font-size:10px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:3px 10px;border-radius:4px;margin-bottom:10px;}
+.kn-top{background:#e2f4f7;color:var(--t);}
+.kn-ini{background:var(--gl);color:var(--g);}
+.kn-adv{background:#fff3e0;color:#b06000;}
+.kcard-body h3{font-size:15px;font-weight:800;color:var(--txt);margin-bottom:7px;}
+.kcard-body p{font-size:13px;color:var(--txt2);line-height:1.65;margin-bottom:16px;}
+
+/* â”€â”€â”€ ROTEIROS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px;}
+.rcard{background:#fff;border-radius:var(--rl);padding:24px;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .2s;}
+.rcard:hover{transform:translateY(-3px);}
+.rcard-num{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);margin-bottom:12px;}
+.rcard h3{font-size:15px;font-weight:800;color:var(--txt);margin-bottom:12px;}
+.rcard ul{list-style:none;margin-bottom:18px;}
+.rcard li{font-size:13px;color:var(--txt2);padding:4px 0;display:flex;align-items:flex-start;gap:7px;border-bottom:1px solid var(--gl);}
+.rcard li::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--g);margin-top:8px;flex-shrink:0;}
+
+/* â”€â”€â”€ DEPOIMENTOS â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.dep-score{display:flex;align-items:center;gap:20px;background:var(--gl);border-radius:var(--r);padding:20px 24px;margin-bottom:32px;}
+.dep-score-num{font-size:42px;font-weight:900;color:var(--g);line-height:1;}
+.dep-score-right strong{display:block;font-size:13px;font-weight:700;color:var(--txt);margin-top:4px;}
+.dep-score-stars{color:#e8a020;font-size:18px;letter-spacing:2px;}
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:18px;}
+.dep-card{background:#fff;border-radius:var(--rl);padding:24px;border:1px solid var(--border);box-shadow:var(--sh);}
+.dep-top{display:flex;align-items:center;gap:12px;margin-bottom:12px;}
+.dep-av{width:44px;height:44px;border-radius:50%;background:var(--gl);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:800;color:var(--gd);flex-shrink:0;}
+.dep-name{font-size:14px;font-weight:800;color:var(--txt);}
+.dep-date{font-size:12px;color:var(--txt3);}
+.dep-stars{color:#e8a020;font-size:13px;margin-bottom:10px;letter-spacing:2px;}
+.dep-card blockquote{font-size:14px;color:var(--txt2);line-height:1.75;border-left:3px solid var(--gl);padding-left:12px;font-style:normal;}
+
+/* â”€â”€â”€ FAQ â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.faq-wrap{max-width:720px;margin:0 auto;}
+.faq-item{border-bottom:1px solid var(--border);}
+.faq-btn{width:100%;background:none;border:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 0;text-align:left;}
+.faq-q{font-size:15px;font-weight:700;color:var(--txt);}
+.faq-ic{width:26px;height:26px;border-radius:50%;border:1.5px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:18px;font-weight:300;color:var(--g);line-height:1;transition:all .22s;}
+.faq-item.open .faq-ic{transform:rotate(45deg);background:var(--g);border-color:var(--g);color:#fff;}
+.faq-ans{display:none;font-size:14px;color:var(--txt2);line-height:1.8;padding-bottom:20px;padding-right:42px;}
+.faq-item.open .faq-ans{display:block;}
+
+/* â”€â”€â”€ CTA BAND â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.cta-band{padding:88px 24px;text-align:center;}
+.cta-band h2{font-size:clamp(26px,4vw,42px);font-weight:900;color:#fff;margin-bottom:12px;line-height:1.2;}
+.cta-band p{font-size:16px;color:rgba(255,255,255,.75);max-width:460px;margin:0 auto 32px;}
+.cta-btns{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;}
+
+/* â”€â”€â”€ FOOTER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.footer{background:#0b1e12;padding:60px 24px 28px;}
+.footer-in{max-width:1100px;margin:0 auto;}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:36px;margin-bottom:48px;}
+.f-logo{font-size:20px;font-weight:900;color:#fff;margin-bottom:8px;}
+.f-logo span{color:#4ab8d8;}
+.f-tagline{font-size:13px;color:rgba(255,255,255,.42);line-height:1.75;margin-bottom:18px;}
+.f-contacts a{display:flex;align-items:center;gap:9px;font-size:13px;color:rgba(255,255,255,.58);margin-bottom:9px;transition:color .15s;}
+.f-contacts a:hover{color:#4ab8d8;}
+.f-hours{font-size:12px;color:rgba(255,255,255,.3);margin-top:10px;line-height:1.6;}
+.f-col h4{font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.28);margin-bottom:16px;}
+.f-col ul{list-style:none;}
+.f-col li{margin-bottom:9px;}
+.f-col a{font-size:13px;color:rgba(255,255,255,.48);transition:color .15s;}
+.f-col a:hover{color:#4ab8d8;}
+.f-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:22px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+.f-bottom p{font-size:12px;color:rgba(255,255,255,.26);}
+@media(max-width:800px){.footer-grid{grid-template-columns:1fr 1fr;}.footer-grid>div:first-child{grid-column:span 2;}}
+@media(max-width:480px){.footer-grid{grid-template-columns:1fr;}.footer-grid>div:first-child{grid-column:span 1;}}
+
+/* â”€â”€â”€ NOTE LINK â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.note{font-size:14px;color:var(--txt2);margin-top:22px;}
+.note a{color:var(--g);font-weight:700;}
+
+/* â”€â”€â”€ CASA DO MANGUE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.casa-wrap{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:start;}
+.casa-galeria{display:flex;flex-direction:column;gap:8px;}
+.casa-main{border-radius:var(--rl);overflow:hidden;height:300px;}
+.casa-thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;}
+.casa-thumb{border-radius:8px;overflow:hidden;height:90px;}
+.casa-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;}
+.casa-badge{display:inline-flex;align-items:center;gap:6px;font-size:12px;font-weight:700;color:var(--g);background:var(--gl);border:1px solid var(--border);padding:5px 12px;border-radius:6px;}
+.casa-badge svg{color:var(--g);flex-shrink:0;}
+.casa-desc{font-size:14px;color:var(--txt2);line-height:1.8;margin-bottom:22px;}
+.comod-title{font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--txt3);margin-bottom:12px;}
+.comod-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:24px;}
+.comod-grid span{display:flex;align-items:center;gap:7px;font-size:13px;color:var(--txt2);}
+.comod-grid svg{color:var(--g);flex-shrink:0;}
+.casa-btns{display:flex;flex-direction:column;gap:12px;}
+.casa-plat{display:flex;gap:10px;}
+.plat-btn{display:inline-flex;align-items:center;gap:7px;font-size:13px;font-weight:700;padding:10px 18px;border-radius:8px;transition:opacity .15s;}
+.plat-btn:hover{opacity:.85;}
+.plat-btn.airbnb{background:#ff5a5f;color:#fff;}
+.plat-btn.booking{background:#003580;color:#fff;}
+@media(max-width:860px){
+  .casa-wrap{grid-template-columns:1fr;}
+  .casa-thumbs{grid-template-columns:repeat(4,1fr);}
+}
+@media(max-width:480px){
+  .casa-thumbs{grid-template-columns:repeat(2,1fr);}
+  .casa-thumb{height:80px;}
+  .comod-grid{grid-template-columns:1fr;}
+  .casa-plat{flex-direction:column;}
+}
+
+
+
+.lang-btn:hover{background:var(--g);color:#fff;border-color:var(--g);}
+.lang-btn svg{flex-shrink:0;}
+
+
+
+
+
+
+
+
+.priv-box{display:flex;gap:24px;align-items:flex-start;background:var(--gl);border:1px solid var(--border);border-radius:var(--rl);padding:28px;margin-top:32px;}
+.priv-icon{width:52px;height:52px;border-radius:10px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--g);}
+.priv-text h3{font-size:16px;font-weight:800;color:var(--txt);margin-bottom:8px;}
+.priv-text p{font-size:14px;color:var(--txt2);line-height:1.75;margin-bottom:16px;}
+.priv-text strong{color:var(--g);}
+@media(max-width:600px){.priv-box{flex-direction:column;gap:16px;}}
+
+/* â”€â”€â”€ ATIVIDADES â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.ativ-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;}
+.ativ-card{background:#fff;border-radius:var(--rl);padding:28px;border:1px solid var(--border);box-shadow:var(--sh);transition:transform .2s;}
+.ativ-card:hover{transform:translateY(-3px);}
+.ativ-icon{width:56px;height:56px;border-radius:12px;background:var(--gl);display:flex;align-items:center;justify-content:center;margin-bottom:16px;color:var(--g);}
+.ativ-card h3{font-size:17px;font-weight:800;color:var(--txt);margin-bottom:10px;}
+.ativ-card>p{font-size:14px;color:var(--txt2);line-height:1.75;margin-bottom:16px;}
+.ativ-list{list-style:none;margin-bottom:20px;}
+.ativ-list li{font-size:13px;color:var(--txt2);padding:5px 0;border-bottom:1px solid var(--gl);display:flex;align-items:center;gap:8px;}
+.ativ-list li::before{content:"";width:5px;height:5px;border-radius:50%;background:var(--g);flex-shrink:0;}
+
+
+/* â”€â”€â”€ PRIVATIVO INFO BANNER â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.priv-info{display:flex;align-items:center;gap:14px;background:var(--gl);border:1px solid var(--border);border-radius:10px;padding:16px 20px;margin-top:24px;flex-wrap:wrap;}
+.priv-info-icon{width:36px;height:36px;border-radius:8px;background:#fff;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-shrink:0;color:var(--g);}
+.priv-info-text{flex:1;min-width:200px;font-size:14px;color:var(--txt2);line-height:1.6;}
+.priv-info-text strong{color:var(--gd);}
+.priv-info-btn{display:inline-flex;align-items:center;gap:7px;background:var(--g);color:#fff!important;font-size:13px;font-weight:700;padding:9px 18px;border-radius:7px;white-space:nowrap;flex-shrink:0;}
+.priv-info-btn:hover{background:var(--gd);}
+
+
+/* â”€â”€â”€ TRANSLADO NOTE â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.transl-note{display:flex;align-items:flex-start;gap:10px;background:var(--gl);border-left:3px solid var(--g);border-radius:0 8px 8px 0;padding:12px 16px;margin-top:20px;margin-bottom:0;}
+.transl-note svg{color:var(--g);flex-shrink:0;margin-top:2px;}
+.transl-note p{font-size:13px;color:var(--txt2);line-height:1.7;}
+.transl-note strong{color:var(--gd);}
+
+
+/* â”€â”€â”€ LIGHTBOX â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+.lb-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.88);z-index:999;align-items:center;justify-content:center;cursor:zoom-out;}
+.lb-overlay.active{display:flex;}
+.lb-overlay img{max-width:92vw;max-height:88vh;object-fit:contain;border-radius:8px;box-shadow:0 8px 40px rgba(0,0,0,.5);}
+.lb-close{position:absolute;top:20px;right:24px;color:#fff;font-size:32px;font-weight:300;cursor:pointer;line-height:1;opacity:.8;}
+.lb-close:hover{opacity:1;}
+.casa-thumb{cursor:zoom-in;}
+.casa-main{cursor:zoom-in;}
+
+
+
+
+
+
+
+
+
+body{top:0!important;}
+
+</style>
+</head>
+<body>
+<nav class="nav">
+  <div class="nav-in">
+    <a href="#" class="nav-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 500" style="height:140px;width:auto;display:block;"><circle cx="190" cy="130" r="30" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M250,110 Q260,85 285,90 Q305,90 310,105 Q335,105 330,130 L240,130 Q230,105 250,110 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><path d="M360,160 Q370,145 385,150 Q400,150 405,160 Q420,160 415,175 L350,175 Q345,160 360,160 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><path d="M120,130 Q130,115 145,120 Q160,120 165,130 Q180,130 175,145 L110,145 Q105,130 120,130 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><path d="M100,280 Q120,230 100,170" fill="none" stroke-width="4" stroke="#005A1F"/><path d="M110,280 Q130,230 110,170" fill="none" stroke-width="4" stroke="#005A1F"/><path d="M105,170 Q70,140 50,180 Q85,180 105,170 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><path d="M105,170 Q100,120 145,130 Q120,155 105,170 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><path d="M105,170 Q60,120 80,105 Q100,140 105,170 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><circle cx="95" cy="175" r="5" fill="#005A1F"/><path d="M 115,270 L 120,210 L 140,192 L 275,190 L 335,235 L 385,240 L 395,250 Q 395,265 390,270 L 370,270 A 35 35 0 0 0 300 270 L 210,270 A 35 35 0 0 0 140 270 Z" fill="none" stroke-width="4" stroke-linejoin="round" stroke="#005A1F"/><path d="M 150,197 L 270,195 L 320,225 L 175,225 L 150,205 Z" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><line x1="265" y1="195" x2="260" y2="225" stroke-width="3" stroke="#005A1F"/><line x1="205" y1="196" x2="200" y2="225" stroke-width="3" stroke="#005A1F"/><line x1="262" y1="225" x2="262" y2="270" stroke-width="2" stroke="#005A1F"/><line x1="202" y1="225" x2="202" y2="270" stroke-width="2" stroke="#005A1F"/><line x1="245" y1="235" x2="255" y2="235" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><line x1="185" y1="235" x2="195" y2="235" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><circle cx="175" cy="275" r="24" fill="none" stroke-width="5" stroke="#005A1F"/><circle cx="175" cy="275" r="10" fill="none" stroke-width="3" stroke="#005A1F"/><circle cx="335" cy="275" r="24" fill="none" stroke-width="5" stroke="#005A1F"/><circle cx="335" cy="275" r="10" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M 393,245 L 375,240 L 370,245" fill="none" stroke-width="2" stroke-linejoin="round" stroke="#005A1F"/><path d="M 119,215 L 125,215 L 130,225 L 117,225" fill="none" stroke-width="2" stroke-linejoin="round" stroke="#005A1F"/><line x1="388" y1="250" x2="395" y2="250" stroke-width="3" stroke-linecap="round" stroke="#005A1F"/><line x1="385" y1="260" x2="393" y2="260" stroke-width="3" stroke-linecap="round" stroke="#005A1F"/><path d="M 170,192 L 170,186 L 255,186 L 255,190" fill="none" stroke-width="3" stroke-linejoin="round" stroke="#005A1F"/><line x1="210" y1="275" x2="300" y2="275" stroke-width="3" stroke-linecap="round" stroke="#005A1F"/><line x1="140" y1="192" x2="115" y2="194" stroke-width="4" stroke-linecap="round" stroke="#005A1F"/><path d="M50,300 L450,300" fill="none" stroke-width="3" stroke-dasharray="40 10 20 15 80 10 60 15 100" stroke="#005A1F"/><path d="M80,315 L420,315" fill="none" stroke-width="2" stroke-dasharray="15 20 50 20 30 15 80" stroke="#005A1F"/><path d="M230,300 Q240,280 250,300" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M260,300 Q270,270 280,300" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M275,300 Q285,285 290,300" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M140,300 Q120,270 100,300" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M370,300 Q390,270 410,300" fill="none" stroke-width="3" stroke="#005A1F"/><path d="M160,295 Q150,280 155,270" fill="none" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><path d="M210,295 Q220,285 225,275" fill="none" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><path d="M310,295 Q300,285 305,275" fill="none" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><path d="M360,295 Q375,280 370,260" fill="none" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/><path d="M80,300 C70,280 90,265 105,275 C115,255 135,265 135,280 C145,275 155,285 145,300 Z" opacity="0.9" fill="#2E7D32"/><path d="M360,300 C350,285 365,265 380,275 C395,255 415,265 410,285 C425,280 435,295 420,300 Z" opacity="0.9" fill="#2E7D32"/><text x="250" y="380" text-anchor="middle" font-family="Georgia, serif" font-size="52" font-weight="bold" letter-spacing="2" fill="#005A1F">MANGUE 4X4</text><path d="M180,410 Q200,400 215,410 T250,410 T285,410 T320,410" fill="none" stroke-width="2" stroke-linecap="round" stroke="#005A1F"/></svg></a>
+    <div class="nav-links">
+      <a href="#passeios">Passeios</a>
+      <a href="#translados">Translados</a>
+      <a href="#hospedagem">Hospedagem</a>
+      <a href="#atividades">Atividades</a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="nav-wa" target="_blank"><svg width="18" height="18" viewBox="0 0 24 24" fill="#fff"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>WhatsApp</span></a>
+  </div>
+</nav>
+<section class="hero">
+  <div class="hero-bg"><img src="image.jpg" alt="Pedra Furada â€” Jericoacoara"/></div>
+  <div class="hero-ov"></div>
+  <div class="hero-in">
+    <p class="hero-tag">Jericoacoara, CearÃ¡ â€” Brasil</p>
+    <div class="hero-brand">Mangue 4x4</div>
+    <h1>Passeios, transfer e rotas<br>em Jericoacoara e regiÃ£o</h1>
+    <p class="hero-sub">Atendimento local para quem quer conhecer Jeri com praticidade, conforto e experiÃªncia 4x4. Roteiros completos, veÃ­culos preparados e reserva direta pelo WhatsApp.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-g" style=""><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar pelo WhatsApp</span></a>
+      <a href="#passeios" class="btn-ghost-w">Ver passeios</a>
+    </div>
+  </div>
+</section>
+<div class="trust-sep"></div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg><strong>WhatsApp direto</strong><span>Resposta rÃ¡pida</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg><strong>Roteiros fixos</strong><span>Completos e testados</span></div>
+    <div class="trust-sep"></div>
+    <div class="trust-item"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="rgba(255,255,255,.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17a4 4 0 100-8 4 4 0 000 8zM19 17a4 4 0 100-8 4 4 0 000 8zM3 11h18"/></svg><strong>VeÃ­culo 4x4</strong><span>SW4 e Buggy</span></div>
+  </div>
+</div>
+<section class="sec bg-off" id="como-funciona">
+  <div class="sec-in">
+    <div class="sec-head c">
+      <span class="sec-label">Como funciona</span>
+      <h2 class="sec-title">Reserve em 3 passos simples</h2>
+      <p class="sec-sub">Sem burocracia. Escolha o passeio, fale com nossa equipe e embarque.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step"><p class="step-n">Passo 01</p><h3>Escolha o roteiro</h3><p>Veja os passeios e translados disponÃ­veis. Cada card tem duraÃ§Ã£o, paradas e tipo de veÃ­culo.</p></div>
+      <div class="step"><p class="step-n">Passo 02</p><h3>Fale com nossa equipe</h3><p>Clique no botÃ£o do roteiro. A mensagem jÃ¡ vai prÃ©-preenchida para o WhatsApp da Mangue 4x4.</p></div>
+      <div class="step"><p class="step-n">Passo 03</p><h3>Confirme e embarque</h3><p>Combine data, horÃ¡rio e ponto de busca com um atendente. Pronto â€” aventura garantida.</p></div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="passeios">
+  <div class="sec-in">
+    <div class="sec-head">
+      <span class="sec-label">Passeios</span>
+      <h2 class="sec-title">Escolha seu roteiro</h2>
+      <div class="bar"></div>
+      <p class="sec-sub">Roteiros fixos e completos â€” veja as paradas, o veÃ­culo e reserve direto pelo WhatsApp.</p>
+    </div>
+    <div class="pgrid"><article class="pcard">
+  <div class="pcard-img"><img src="image.jpg" alt="Passeio Leste Jericoacoara" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block;transition:transform .4s;"/>
+  <span class="pcard-selo ">Roteiro clÃ¡ssico</span></div>
+  <div class="pcard-body">
+    <h3>Passeio Leste â€” Lagoas e Mar de Esmeralda</h3>
+    <p class="pcard-desc">O favorito de quem visita Jeri. Lagoas de Ã¡gua doce quente, mar de esmeralda e dunas deslumbrantes em 6 horas inesquecÃ­veis.</p>
+    <div class="pcard-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9h Ã s 15h</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ~6 horas</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v5"/><circle cx="15" cy="17" r="2"/><circle cx="7" cy="17" r="2"/><path d="M13 17H9"/></svg> 4x4, Buggy ou Jardinheira</span>
+    </div>
+    <div class="pcard-paradas"><p class="paradas-label">Paradas</p><div class="paradas-wrap"><span class="parada">Pedra Furada</span><span class="parada">Ãrvore da PreguiÃ§a</span><span class="parada">Praia do PreÃ¡</span><span class="parada">Buraco Azul</span><span class="parada">Lagun Beach</span><span class="parada">Lagoa Azul</span><span class="parada">Lagoa do ParaÃ­so</span><span class="parada">Lagoa do AmÃ¢ncio</span></div></div>
+    <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20Passeio%20Leste." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar passeio</span></a>
+  </div>
+</article><article class="pcard">
+  <div class="pcard-img"><img src="image.jpg" alt="Passeio Oeste Jericoacoara" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block;transition:transform .4s;"/>
+  <span class="pcard-selo amber">Aventura 4x4</span></div>
+  <div class="pcard-body">
+    <h3>Passeio Oeste â€” Dunas Gigantes e Travessia de Balsa</h3>
+    <p class="pcard-desc">Para quem quer adrenalina. Dunas da Tatajuba, sandboard, travessia de balsa e paisagens que parecem outro planeta.</p>
+    <div class="pcard-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9h Ã s 15h</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> ~6 horas</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v5"/><circle cx="15" cy="17" r="2"/><circle cx="7" cy="17" r="2"/><path d="M13 17H9"/></svg> Buggy ou Jardinheira</span>
+    </div>
+    <div class="pcard-paradas"><p class="paradas-label">Paradas</p><div class="paradas-wrap"><span class="parada">RaÃ­zes do Mangue</span><span class="parada">Travessia de Balsa</span><span class="parada">Dunas da Tatajuba</span><span class="parada">ToboÃ¡gua Natural</span><span class="parada">Lago Grande</span><span class="parada">Retorno pela Praia</span></div></div>
+    <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20Passeio%20Oeste." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar passeio</span></a>
+  </div>
+</article><article class="pcard">
+  <div class="pcard-img"><img src="image.jpg" alt="Barrinha Jericoacoara" loading="lazy" style="width:100%;height:230px;object-fit:cover;display:block;transition:transform .4s;"/>
+  <span class="pcard-selo teal">Ideal para pÃ´r do sol</span></div>
+  <div class="pcard-body">
+    <h3>Passeio Barrinha â€” O PÃ´r do Sol mais Bonito do CearÃ¡</h3>
+    <p class="pcard-desc"> dunas brancas e o pÃ´r do sol que todo mundo filma mas sÃ³ quem vai entende.</p>
+    <div class="pcard-meta">
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 9h Ã s 15h+</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg> 6h + pÃ´r do sol</span>
+      <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 17H3a2 2 0 01-2-2V5a2 2 0 012-2h11l5 5v5"/><circle cx="15" cy="17" r="2"/><circle cx="7" cy="17" r="2"/><path d="M13 17H9"/></svg> Buggy ou Jardinheira</span>
+    </div>
+    <div class="pcard-paradas"><p class="paradas-label">Paradas</p><div class="paradas-wrap"><span class="parada">Dunas da Barrinha</span><span class="parada">Barrinha de Baixo</span><span class="parada">Komaki (opcional)</span><span class="parada">PÃ´r do Sol</span></div></div>
+    <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20Passeio%20Barrinha." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar passeio</span></a>
+  </div>
+</article></div>
+</section>
+<section class="sec bg-sand" id="diferenciais">
+  <div class="sec-in">
+    <div class="sec-head c">
+      <span class="sec-label">Diferenciais</span>
+      <h2 class="sec-title">Por que escolher a Mangue 4x4?</h2>
+      <p class="sec-sub">Uma operaÃ§Ã£o local organizada, confiÃ¡vel e preparada para fazer sua visita a Jeri valer cada segundo.</p>
+    </div>
+    <div class="dif-grid">
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+        <h3>Atendimento local</h3>
+        <p>Atendimento de quem trabalha com turismo em Jericoacoara hÃ¡ mais de 10 anos e conhece cada detalhe das rotas, dos melhores horÃ¡rios e das condiÃ§Ãµes de cada dia.</p>
+      </div>
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg></div>
+        <h3>Suporte pelo WhatsApp</h3>
+        <p>Fale diretamente com um atendente da Mangue 4x4. Sem robÃ´, sem intermediÃ¡rio â€” resposta rÃ¡pida e atendimento real.</p>
+      </div>
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg></div>
+        <h3>Roteiros testados</h3>
+        <p>Todos os passeios tÃªm roteiro fixo, duraÃ§Ã£o definida e paradas confirmadas. VocÃª sabe exatamente o que vai fazer.</p>
+      </div>
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 17a4 4 0 100-8 4 4 0 000 8zM19 17a4 4 0 100-8 4 4 0 000 8zM3 11h18"/></svg></div>
+        <h3>VeÃ­culo preparado</h3>
+        <p>Toyota SW4 4x4, Buggy e Jardinheira prontos para as dunas e o trecho de areia que leva atÃ© a vila de Jeri.</p>
+      </div>
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+        <h3>PreÃ§o justo</h3>
+        <p>Sem taxas escondidas. VocÃª paga pelo serviÃ§o com valores honestos e transparentes desde o primeiro contato.</p>
+      </div>
+      <div class="dif">
+        <div class="dif-ic"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg></div>
+        <h3>Para todo tipo de grupo</h3>
+        <p>Casais, famÃ­lias, amigos e grupos de kite â€” temos veÃ­culo e roteiro certo para cada perfil de viajante.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="sec" id="translados">
+  <div class="sec-in">
+    <div class="sec-head">
+      <span class="sec-label">Translados</span>
+      <h2 class="sec-title">Chegue a Jericoacoara com conforto</h2>
+      <div class="bar"></div>
+      <p class="sec-sub">De Fortaleza ou do aeroporto JJD direto atÃ© a vila de Jeri â€” sem estresse, no veÃ­culo certo.</p>
+      <div class="transl-note">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 8v4M12 16h.01"/></svg>
+        <p><strong>Compartilhado:</strong> divide o veÃ­culo com outros passageiros â€” opÃ§Ã£o mais econÃ´mica. &nbsp;Â·&nbsp; <strong>Privativo:</strong> veÃ­culo exclusivo para o seu grupo de <strong>4 ou 6 pessoas</strong>. VocÃª define o horÃ¡rio e nÃ£o divide com ninguÃ©m.</p>
+      </div>
+    </div>
+    <div class="t-grid">
+      <div class="tcard">
+        <div class="tcard-head"><h3>Fortaleza â€” Jeri</h3><p>Aeroporto de Fortaleza (FOR)</p></div>
+        <div class="tcard-body">
+          <ul class="tcard-list"><li>SaÃ­da todos os dias</li><li>Toyota SW4 4x4</li><li>Compartilhado ou privativo</li><li>Aproximadamente 5h</li><li>Ar-condicionado</li></ul>
+          <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20translado%20de%20Fortaleza%20para%20Jericoacoara." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar translado</span></a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-head"><h3>Aeroporto JJD â€” Jeri</h3><p>Aeroporto Regional de Jericoacoara</p></div>
+        <div class="tcard-body">
+          <ul class="tcard-list"><li>SaÃ­da todos os dias</li><li>Toyota SW4 4x4</li><li>Compartilhado ou privativo</li><li>Aproximadamente 1h</li><li>Ar-condicionado</li></ul>
+          <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20translado%20do%20Aeroporto%20JJD%20para%20Jericoacoara." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar translado</span></a>
+        </div>
+      </div>
+      <div class="tcard">
+        <div class="tcard-head"><h3>Jeri â€” Fortaleza</h3><p>Retorno para o aeroporto</p></div>
+        <div class="tcard-body">
+          <ul class="tcard-list"><li>SaÃ­da todos os dias</li><li>Toyota SW4 4x4</li><li>Compartilhado ou privativo</li><li>Aproximadamente 5h</li><li>Ar-condicionado</li></ul>
+          <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20o%20translado%20de%20Jericoacoara%20para%20Fortaleza." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar translado</span></a>
+        </div>
+      </div>
+    </div></div>
+</section>
+
+<!-- CASA DO MANGUE -->
+<section class="sec" id="hospedagem">
+  <div class="sec-in">
+    <div class="sec-head">
+      <span class="sec-label">Hospedagem</span>
+      <h2 class="sec-title">Casa do Mangue â€” Barrinha de Baixo</h2>
+      <div class="bar"></div>
+      <p class="sec-sub">Um refÃºgio paradisÃ­aco a 22km de Jericoacoara, na Praia de Barrinha de Baixo. Para quem quer descanso de verdade perto de tudo que Jeri tem de melhor.</p>
+    </div>
+
+    <div class="casa-wrap">
+
+      <!-- GALERIA -->
+      <div class="casa-galeria">
+        <div class="casa-main"><img src="image.jpg" alt="Casa do Mangue â€” Barrinha de Baixo" style="width:100%;height:100%;object-fit:cover;display:block;" onclick="openLB(this.src,this.alt)" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;"/>
+        </div>
+        <div class="casa-thumbs">
+          <div class="casa-thumb">
+    <img onclick="openLB(this.src,this.alt)" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" src="image.jpg" alt="Casa do Mangue â€” Ã¡rea externa" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+          <div class="casa-thumb">
+    <img onclick="openLB(this.src,this.alt)" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" src="image.jpg" alt="Quarto Casa do Mangue" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+          <div class="casa-thumb">
+    <img onclick="openLB(this.src,this.alt)" style="width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in;" src="image.jpg" alt="Quarto Casa do Mangue" style="width:100%;height:100%;object-fit:cover;display:block;"/></div>
+          
+        </div>
+      </div>
+
+      <!-- INFO -->
+      <div class="casa-info">
+
+        <div class="casa-badges">
+          <span class="casa-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg> 4 quartos</span>
+          <span class="casa-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 12h16M4 6h16M4 18h7"/></svg> 3 banheiros</span>
+          <span class="casa-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg> AtÃ© 10 pessoas</span>
+          <span class="casa-badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Barrinha de Baixo</span>
+        </div>
+
+        <p class="casa-desc">A Casa do Mangue Ã© um sonho para quem ama o mar e a tranquilidade. Localizada na Praia de Barrinha de Baixo, a 22km de Jericoacoara, ela oferece espaÃ§o, conforto e uma Ã¡rea externa que convida ao relaxamento.</p>
+
+        <div class="casa-comod">
+          <p class="comod-title">Comodidades</p>
+          <div class="comod-grid">
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.55a11 11 0 0114.08 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg> Wi-Fi</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M2 12h20"/></svg> Ventilador em todos os quartos</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg> Cozinha completa</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/></svg> Sala espaÃ§osa</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 7h14M5 12h14M5 17h14"/></svg> Ãrea externa espaÃ§osa</span>
+            <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13" rx="2"/><path d="M16 8h4l3 5v3h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg> Estacionamento</span>
+          </div>
+        </div>
+
+        <div class="casa-btns">
+          <a href="https://wa.me/5588996186494?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20tenho%20interesse%20em%20locar%20a%20Casa%20do%20Mangue%20em%20Barrinha%20de%20Baixo.%20Poderia%20me%20informar%20a%20disponibilidade?" class="btn-g">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            <span>Consultar disponibilidade</span>
+          </a>
+          <div class="casa-plat">
+            <a href="https://www.airbnb.com.au/rooms/52322171?guests=1&adults=1&s=67&unique_share_id=9fa3d6e1-f8e8-4a2a-bc10-62df3c08b3d3" target="_blank" class="plat-btn airbnb">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 4.5c1.326 0 2.4 1.074 2.4 2.4S13.326 9.3 12 9.3 9.6 8.226 9.6 6.9 10.674 4.5 12 4.5zm5.7 13.35c-.15.45-.45.75-.9.9-1.05.3-2.7.75-4.8.75s-3.75-.45-4.8-.75c-.45-.15-.75-.45-.9-.9-.15-.45 0-.9.3-1.2 1.2-1.35 1.95-3.15 1.95-5.1V10.5c0-.45.15-.9.45-1.2.3-.3.75-.45 1.2-.45h3.6c.45 0 .9.15 1.2.45.3.3.45.75.45 1.2v1.05c0 1.95.75 3.75 1.95 5.1.3.3.45.75.3 1.2z"/></svg>
+              Ver no Airbnb
+            </a>
+            <a href="https://www.booking.com/hotel/br/casa-do-mangue-acarau.en-gb.html?aid=2062892&label=a1122294878704953540142786150486221182250_AqLzeEtQ&anid=1122294878704953540142786150486221182250" target="_blank" class="plat-btn booking">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M4 0h16a4 4 0 014 4v16a4 4 0 01-4 4H4a4 4 0 01-4-4V4a4 4 0 014-4zm5.5 6H8v12h1.5v-4.5H12c1.93 0 3-1.07 3-3S13.93 6 12 6H9.5zm0 1.5H12c.93 0 1.5.57 1.5 1.5S12.93 9 12 9H9.5V7.5z"/></svg>
+              Ver no Booking
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec bg-off" id="atividades">
+  <div class="sec-in">
+    <div class="sec-head c">
+      <span class="sec-label">Atividades</span>
+      <h2 class="sec-title">Atividades em Jericoacoara</h2>
+      <p class="sec-sub">Indicamos e reservamos as melhores atividades da regiÃ£o para complementar a sua experiÃªncia em Jeri.</p>
+    </div>
+    <div class="ativ-grid">
+
+      <div class="ativ-card">
+        <div class="ativ-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L8 12l4 2 4-2-4-10z"/><path d="M8 12l-4 8"/><path d="M16 12l4 8"/><path d="M8 20h8"/></svg>
+        </div>
+        <h3>Aulas de Kitesurf</h3>
+        <p>Indicamos as melhores escolas de kitesurf da regiÃ£o â€” no PreÃ¡, na Barrinha de Baixo e em Jericoacoara. Professores certificados IKO para todos os nÃ­veis.</p>
+        <ul class="ativ-list">
+          <li>Praia do PreÃ¡ â€” melhor spot da regiÃ£o</li>
+          <li>Barrinha de Baixo â€” ideal para iniciantes</li>
+          <li>Jericoacoara â€” para quem jÃ¡ sabe</li>
+          <li>Instrutores certificados IKO</li>
+        </ul>
+        <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20indica%C3%A7%C3%A3o%20de%20escola%20de%20kitesurf%20em%20Jericoacoara." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>IndicaÃ§Ã£o de escola de kite</span></a>
+      </div>
+
+      <div class="ativ-card">
+        <div class="ativ-icon">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="2"/><circle cx="18" cy="17" r="2"/><path d="M4 17H2v-5l3-4h10l3 4v5h-2M6 17h12"/><path d="M9 8v3M15 8v3"/></svg>
+        </div>
+        <h3>Aluguel de Quadriciclo e UTV</h3>
+        <p>Reserve seu quadriciclo ou UTV para explorar as dunas e trilhas de Jericoacoara. Perfeito para quem quer aventura no prÃ³prio ritmo â€” individual ou em grupo.</p>
+        <ul class="ativ-list">
+          <li>Quadriciclo â€” individual ou duplo</li>
+          <li>UTV â€” ideal para grupos e famÃ­lias</li>
+          <li>Dunas e trilhas de Jeri</li>
+          <li>Aluguel por hora ou diÃ¡ria</li>
+        </ul>
+        <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20reservar%20um%20quadriciclo%20ou%20UTV%20em%20Jericoacoara." class="btn-g" style="width:100%;justify-content:center;"><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar quadriciclo ou UTV</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="depoimentos">
+  <div class="sec-in">
+    <div class="sec-head c">
+      <span class="sec-label">AvaliaÃ§Ãµes</span>
+      <h2 class="sec-title">Quem foi, aprovou</h2>
+      <p class="sec-sub">Clientes que confiaram na Mangue 4x4 para viver Jericoacoara de verdade.</p>
+    </div>
+    <div class="dep-score">
+      <div class="dep-score-num">5.0</div>
+      <div class="dep-score-right">
+        <div class="dep-score-stars">â˜…â˜…â˜…â˜…â˜…</div>
+        <strong>Nota mÃ©dia dos clientes</strong>
+        <span style="font-size:13px;color:var(--txt2);">Baseado em avaliaÃ§Ãµes recebidas pelo WhatsApp</span>
+      </div>
+    </div>
+    <div class="dep-grid">
+      <div class="dep-card"><div class="dep-top"><div class="dep-av">AC</div><div><div class="dep-name">Ana Carolina</div><div class="dep-date">Julho de 2024</div></div></div><div class="dep-stars">â˜…â˜…â˜…â˜…â˜…</div><blockquote>Fui pela primeira vez em Jeri e a Mangue 4x4 tornou tudo incrÃ­vel. O Passeio Leste foi um dos dias mais bonitos da minha vida. A Lagoa do ParaÃ­so parece que nÃ£o Ã© real.</blockquote></div>
+      <div class="dep-card"><div class="dep-top"><div class="dep-av">PS</div><div><div class="dep-name">Pedro Santiago</div><div class="dep-date">MarÃ§o de 2024</div></div></div><div class="dep-stars">â˜…â˜…â˜…â˜…â˜…</div><blockquote>Fiz trÃªs passeios em trÃªs dias. O pÃ´r do sol na Barrinha me deixou sem fala. Atendimento pelo WhatsApp foi Ã¡gil e o translado foi Ã³timo. JÃ¡ estou planejando voltar.</blockquote></div>
+      <div class="dep-card"><div class="dep-top"><div class="dep-av">JA</div><div><div class="dep-name">JÃºlia Arcanjo</div><div class="dep-date">Maio de 2024</div></div></div><div class="dep-stars">â˜…â˜…â˜…â˜…â˜…</div><blockquote>Jeri superou todas as expectativas. Venha para ficar pelo menos 4 dias â€” cada dia tem um passeio diferente e vocÃª vai querer fazer todos.</blockquote></div>
+    </div>
+  </div>
+</section>
+<section class="sec bg-sand" id="faq">
+  <div class="sec-in">
+    <div class="sec-head c">
+      <span class="sec-label">FAQ</span>
+      <h2 class="sec-title">Perguntas frequentes</h2>
+      <p class="sec-sub">Respondemos as principais dÃºvidas. Ainda tem alguma? Fale com nossa equipe.</p>
+    </div>
+    <div class="faq-wrap"><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Como funciona a reserva?</span><div class="faq-ic">+</div></button><div class="faq-ans">Simples: escolha o passeio, clique no botÃ£o e envie mensagem para o WhatsApp da Mangue 4x4. Um atendente confirma a data, horÃ¡rio e ponto de busca diretamente com vocÃª.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Quais formas de pagamento sÃ£o aceitas?</span><div class="faq-ic">+</div></button><div class="faq-ans">Pix, transferÃªncia bancÃ¡ria e dinheiro. Consulte nossa equipe pelo WhatsApp para confirmar as opÃ§Ãµes disponÃ­veis na sua data.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">O passeio depende da marÃ©?</span><div class="faq-ic">+</div></button><div class="faq-ans">Alguns roteiros, como o Transfer Via Praias, dependem da marÃ©. Nossa equipe sempre orienta sobre o melhor horÃ¡rio conforme as condiÃ§Ãµes do dia.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">O que estÃ¡ incluso no passeio?</span><div class="faq-ic">+</div></button><div class="faq-ans">Transporte no veÃ­culo 4x4 ou buggy, guia e todas as paradas do roteiro. AlimentaÃ§Ã£o, entradas e passeios opcionais sÃ£o pagos Ã  parte.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">HÃ¡ opÃ§Ã£o de passeio privativo?</span><div class="faq-ic">+</div></button><div class="faq-ans">Sim. Todos os roteiros podem ser feitos de forma privativa â€” ideal para casais, famÃ­lias e grupos. Consulte valores pelo WhatsApp.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">CrianÃ§as podem participar?</span><div class="faq-ic">+</div></button><div class="faq-ans">Sim. A Jardinheira 4x4 Ã© a opÃ§Ã£o mais indicada para famÃ­lias com crianÃ§as, por ser mais estÃ¡vel e confortÃ¡vel. Informe a idade ao reservar.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">Como funciona o transfer de Fortaleza?</span><div class="faq-ic">+</div></button><div class="faq-ans">A viagem dura cerca de 5 horas. VocÃª pode optar pelo modalidade compartilhada ou pelo veÃ­culo privativo. O ponto de embarque Ã© combinado com nossa equipe pelo WhatsApp.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">De onde sai o passeio?</span><div class="faq-ic">+</div></button><div class="faq-ans">Os passeios saem da vila de Jericoacoara. Se vocÃª precisar de translado atÃ© Jeri, temos essa opÃ§Ã£o disponÃ­vel.</div></div><div class="faq-item"><button class="faq-btn" onclick="toggleFaq(this)"><span class="faq-q">VocÃªs ajudam a montar roteiro?</span><div class="faq-ic">+</div></button><div class="faq-ans">Sim. Nossa equipe conhece Jeri de ponta a ponta e pode ajudar a montar o roteiro ideal conforme seus dias disponÃ­veis, interesses e perfil de grupo.</div></div></div>
+    <div style="text-align:center;margin-top:32px;">
+      <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20tenho%20uma%20d%C3%BAvida." class="btn-g" style=""><svg width="16" height="16" viewBox="0 0 24 24" fill="#fff" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Falar com nossa equipe</span></a>
+    </div>
+  </div>
+</section>
+<section class="bg-dark cta-band">
+  <h2>Planeje seu passeio ou transfer<br>com a equipe da Mangue 4x4</h2>
+  <p>Atendimento rÃ¡pido pelo WhatsApp para reservas e informaÃ§Ãµes. Reserve com um atendente da nossa equipe.</p>
+  <div class="cta-btns">
+    <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4%20e%20quero%20planejar%20minha%20viagem%20para%20Jericoacoara." class="btn-w"><svg width="16" height="16" viewBox="0 0 24 24" fill="#134f33" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg><span>Reservar pelo WhatsApp</span></a>
+    <a href="#passeios" class="btn-ghost-w">Ver passeios</a>
+  </div>
+</section>
+<footer class="footer">
+  <div class="footer-in">
+    <div class="footer-grid">
+      <div>
+        <div class="f-logo">Mangue<span> 4x4</span></div>
+        <p class="f-tagline">Passeios, transfer e experiÃªncias 4x4 em Jericoacoara. Atendimento local, preÃ§o justo e reserva direta pelo WhatsApp.</p>
+        <div class="f-contacts">
+          <a href="https://wa.me/5588996186494?text=Ol%C3%A1%21%20Vim%20pelo%20site%20da%20Mangue%204x4."><svg width="14" height="14" viewBox="0 0 24 24" fill="#4ab8d8" style="flex-shrink:0"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> (88) 99618-6494 â€” WhatsApp oficial</a>
+          <a href="https://instagram.com/mangue4x4" target="_blank"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ab8d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#4ab8d8" stroke="none"/></svg> @mangue4x4 no Instagram</a>
+          <a href="#"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#4ab8d8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg> Jericoacoara, CearÃ¡ â€” Brasil</a>
+        </div>
+        <p class="f-hours">Atendimento: todos os dias, das 7h Ã s 21h<br>Reservas e informaÃ§Ãµes pelo WhatsApp</p>
+      </div>
+      <div class="f-col"><h4>Passeios</h4><ul><li><a href="#passeios">Passeio Leste</a></li><li><a href="#passeios">Passeio Oeste</a></li><li><a href="#passeios">Passeio Barrinha</a></li><li><a href="#passeios">Pedra Furada</a></li><li><a href="#passeios">Transfer Via Praias</a></li></ul></div>
+      <div class="f-col"><h4>ServiÃ§os</h4><ul><li><a href="#translados">Translados</a></li><li><a href="#hospedagem">Casa do Mangue</a></li>
+          <li><a href="#atividades">Atividades</a></li>
+          <li><a href="#diferenciais">Atendimento local</a></li></ul></div>
+      <div class="f-col"><h4>InformaÃ§Ãµes</h4><ul><li><a href="#como-funciona">Como funciona</a></li><li><a href="#diferenciais">Por que a Mangue 4x4</a></li><li><a href="#depoimentos">AvaliaÃ§Ãµes</a></li><li><a href="#faq">Perguntas frequentes</a></li><li><a href="#">PolÃ­tica de reserva</a></li></ul></div>
+    </div>
+    <div class="f-bottom">
+      <p>Â© 2026 Mangue 4x4 â€” Jericoacoara, CearÃ¡. Todos os direitos reservados.</p>
+      <p>Atendimento oficial pelo WhatsApp (88) 99618-6494</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleFaq(btn){
+  var item=btn.parentElement;
+  var open=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(function(i){i.classList.remove('open');});
+  if(!open)item.classList.add('open');
+}
+</script>
+
+
+
+
+<div class="lb-overlay" id="lb-overlay" onclick="closeLB()">
+  <span class="lb-close" onclick="closeLB()">&times;</span>
+  <img id="lb-img" src="" alt=""/>
+</div>
+<script>
+function openLB(src,alt){
+  document.getElementById('lb-img').src=src;
+  document.getElementById('lb-img').alt=alt||'';
+  document.getElementById('lb-overlay').classList.add('active');
+  document.body.style.overflow='hidden';
+}
+function closeLB(){
+  document.getElementById('lb-overlay').classList.remove('active');
+  document.body.style.overflow='';
+}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLB();});
+</script>
+<script>
+(function(){
+  var sections=document.querySelectorAll('section[id]');
+  var links=document.querySelectorAll('.nav-links a[href^="#"]');
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id=entry.target.getAttribute('id');
+        links.forEach(function(a){
+          a.classList.toggle('active',a.getAttribute('href')==='#'+id);
+        });
+      }
+    });
+  },{rootMargin:'-40% 0px -50% 0px'});
+  sections.forEach(function(s){observer.observe(s);});
+})();
+</script>
+
+</body></html>
