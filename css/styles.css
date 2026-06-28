@@ -51,7 +51,7 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 
 /* â”€â”€ HERO â”€â”€ */
 .hero{position:relative;min-height:100svh;display:flex;align-items:center;overflow:hidden;}
-.hero-img{position:absolute;inset:0;background-image:url('../imagens/pedra-furada.jpg');background-size:cover;background-position:center 30%;will-change:transform;transform:scale(1.08);}
+.hero-img{position:absolute;inset:0;background-image:url('../imagens/pedra-furada.webp');background-size:cover;background-position:center 30%;will-change:transform;transform:scale(1.08);}
 .hero-ov{position:absolute;inset:0;background:linear-gradient(150deg,rgba(5,15,5,.88) 0%,rgba(10,28,10,.7) 50%,rgba(6,20,6,.42) 100%);}
 .hero-fade{position:absolute;bottom:0;left:0;right:0;height:180px;background:linear-gradient(to top,var(--verde-esc),transparent);}
 .hero-body{position:relative;z-index:3;max-width:1240px;margin:0 auto;padding:130px 48px 100px;width:100%;}

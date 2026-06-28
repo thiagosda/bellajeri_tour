@@ -1,0 +1,24 @@
+{
+  "name": "bellajeri_tour",
+  "version": "1.0.0",
+  "description": "Projeto estático em HTML, CSS e JavaScript.",
+  "main": "optimize.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thiagosda/bellajeri_tour.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/thiagosda/bellajeri_tour/issues"
+  },
+  "homepage": "https://github.com/thiagosda/bellajeri_tour#readme",
+  "dependencies": {
+    "sharp": "^0.35.2"
+  }
+}
