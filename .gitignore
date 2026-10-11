@@ -5,3 +5,9 @@ Thumbs.db
 # Editor
 .vscode/
 .idea/
+
+# Dependencias e segredos
+node_modules/
+.env
+.env.*
+.vercel

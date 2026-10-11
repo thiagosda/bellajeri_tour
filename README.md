@@ -1,65 +1,45 @@
-# Bella Jeri Tour
+# BellaJeri Tour — site
 
-Projeto estático em HTML, CSS e JavaScript.
+Site da **BellaJeri Tour**, empresa de transfers e passeios em Jericoacoara (CE): [bellajeritour.com.br](https://www.bellajeritour.com.br).
+Feito para ser rápido e fácil de achar no Google, com o atendimento direto pelo WhatsApp.
 
-## Estrutura do projeto
+## O que tem
+
+- Página inicial e uma página por serviço, cada uma com título, descrição e URL próprios para SEO:
+  transfer Fortaleza ⇄ Jericoacoara e passeios Leste, Oeste e Barrinha.
+- URLs limpas (sem `.html`) por meio de `rewrites` no `vercel.json`.
+- `sitemap.xml` para indexação.
+- Imagens em WebP, redimensionadas por script (`npm run optimize`).
+- Seção de avaliações com link para a página da empresa no Google Maps (sem chave de API no código).
+
+## Stack
+
+HTML, CSS e JavaScript puros, sem framework e sem build. Hospedagem na Vercel.
+
+## Estrutura
 
 ```txt
-bella-jeri-tour/
-├── index.html
-├── css/
-│   └── styles.css
-├── js/
-│   └── script.js
-└── assets/
-    └── images/
+index.html                       página inicial
+passeio-*.html, transfer-*.html  páginas de serviço
+passeios-em-jericoacoara.html    listagem de passeios
+css/styles.css                   estilos
+js/script.js                     comportamento da página
+imagens/  videos/                mídia (WebP)
+scripts/optimize.js              converte imagens para WebP
+vercel.json  sitemap.xml         rotas limpas e SEO
 ```
 
-## Como abrir no computador
-
-Abra o arquivo `index.html` no navegador.
-
-Se quiser testar de forma mais correta, use a extensão **Live Server** no VS Code.
-
-## Como subir para o GitHub pelo terminal
-
-1. Crie um repositório novo no GitHub.
-2. Não marque a opção de criar README, porque este projeto já possui um.
-3. Copie a URL do repositório.
-4. Dentro da pasta do projeto, rode:
+## Rodar localmente
 
 ```bash
-git init
-git add .
-git commit -m "Primeira versão do site Bella Jeri Tour"
-git branch -M main
-git remote add origin COLE_A_URL_DO_SEU_REPOSITORIO_AQUI
-git push -u origin main
+npx serve .
 ```
 
-Exemplo da URL:
+## Otimizar novas imagens
+
+Coloque PNG/JPG em `imagens/` e rode:
 
 ```bash
-git remote add origin https://github.com/seu-usuario/bella-jeri-tour.git
+npm install
+npm run optimize
 ```
-
-## Como subir para o GitHub pelo site
-
-1. Entre no GitHub.
-2. Clique em **New repository**.
-3. Coloque o nome do repositório, por exemplo: `bella-jeri-tour`.
-4. Crie o repositório.
-5. Clique em **uploading an existing file**.
-6. Arraste todos os arquivos e pastas deste projeto.
-7. Clique em **Commit changes**.
-
-## Como publicar no GitHub Pages
-
-1. No repositório, vá em **Settings**.
-2. Entre em **Pages**.
-3. Em **Build and deployment**, selecione:
-   - Source: `Deploy from a branch`
-   - Branch: `main`
-   - Folder: `/root`
-4. Clique em **Save**.
-5. O GitHub vai gerar um link público do site.

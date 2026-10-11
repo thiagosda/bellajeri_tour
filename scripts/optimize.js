@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const rootDir = 'c:\\Users\\thiag\\bellajeri_tour\\bellajeri_tour';
+const rootDir = path.resolve(__dirname, '..');
 const imgDir = path.join(rootDir, 'imagens');
 
 async function optimizeImages() {

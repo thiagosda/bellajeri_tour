@@ -1,24 +1,22 @@
 {
   "name": "bellajeri_tour",
   "version": "1.0.0",
-  "description": "Projeto estático em HTML, CSS e JavaScript.",
-  "main": "optimize.js",
+  "description": "Site de transfers e passeios em Jericoacoara (HTML, CSS e JavaScript estaticos).",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "optimize": "node scripts/optimize.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/thiagosda/bellajeri_tour.git"
   },
-  "keywords": [],
-  "author": "",
+  "author": "Thiago",
   "license": "ISC",
   "type": "commonjs",
   "bugs": {
     "url": "https://github.com/thiagosda/bellajeri_tour/issues"
   },
   "homepage": "https://github.com/thiagosda/bellajeri_tour#readme",
-  "dependencies": {
+  "devDependencies": {
     "sharp": "^0.35.2"
   }
 }
