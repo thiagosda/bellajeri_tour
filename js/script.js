@@ -16,16 +16,36 @@ var nav=document.getElementById('nav');
 window.addEventListener('scroll',function(){nav.classList.toggle('on',window.scrollY>60);});
 
 // ── MOBILE MENU ──
+// Painel lateral: abre pelas 3 barras; fecha no X, no fundo escuro, no Esc ou ao tocar num link.
 var mm=document.getElementById('mm');
+var mmBd=document.getElementById('mm-bd');
 var burger=document.getElementById('burger');
-burger.addEventListener('click',function(){
-  mm.classList.toggle('open');
-  burger.classList.toggle('open');
-});
+function openMenu(){
+  mm.classList.add('open');
+  mmBd.classList.add('open');
+  mm.setAttribute('aria-hidden','false');
+  burger.setAttribute('aria-expanded','true');
+  document.body.classList.add('mm-lock');
+}
 function closeMenu(){
   mm.classList.remove('open');
-  burger.classList.remove('open');
+  mmBd.classList.remove('open');
+  mm.setAttribute('aria-hidden','true');
+  burger.setAttribute('aria-expanded','false');
+  document.body.classList.remove('mm-lock');
 }
+burger.addEventListener('click',openMenu);
+document.getElementById('mm-close').addEventListener('click',closeMenu);
+mmBd.addEventListener('click',closeMenu);
+mm.querySelectorAll('a').forEach(function(a,i){
+  a.addEventListener('click',closeMenu);
+  if(a.parentElement.classList.contains('mm-links')){
+    a.style.transitionDelay=(0.05+i*0.035)+'s, '+(0.05+i*0.035)+'s, 0s, 0s';
+    // Destaca a página atual
+    if(a.getAttribute('href')===location.pathname.replace(/\.html$/,'')){a.classList.add('active');}
+  }
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeMenu();});
 
 // ── BARRA DE PROGRESSO DE LEITURA ──
 (function(){
