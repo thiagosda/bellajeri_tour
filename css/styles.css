@@ -901,3 +901,92 @@ img{display:block;max-width:100%;}a{text-decoration:none;color:inherit;}
 .cta-section p{color:rgba(255,255,255,.75);font-size:1rem;margin-bottom:30px;}
 .cta-section .hero-btns{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;}
 @media(max-width:640px){.cta-section{padding:56px 24px;}}
+
+/* ══════════════════════════════════════════
+   REFINAMENTO VISUAL — confiança e animações
+   ══════════════════════════════════════════ */
+
+/* ── Barra de progresso de leitura ── */
+.scroll-prog{position:fixed;top:0;left:0;height:3px;width:100%;z-index:600;transform:scaleX(0);transform-origin:left;background:linear-gradient(90deg,var(--laranja),#f5c040);pointer-events:none;}
+
+/* ── Hero: zoom lento na foto (Ken Burns) ── */
+.hero-img{animation:heroZoom 22s ease-out forwards;}
+@keyframes heroZoom{from{transform:scale(1.18);}to{transform:scale(1.06);}}
+
+/* Selo de avaliação acima do título */
+.hero-pill{display:inline-flex;align-items:center;gap:10px;padding:8px 16px 8px 12px;margin-bottom:22px;border-radius:50px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.22);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);font-size:13px;color:rgba(255,255,255,.85);opacity:0;animation:fadeUp .8s .25s ease forwards;transition:background .3s,border-color .3s;}
+.hero-pill:hover{background:rgba(255,255,255,.18);border-color:rgba(255,255,255,.4);}
+.hero-pill strong{color:#fff;font-weight:700;}
+.hero-pill-stars{color:#f5c040;letter-spacing:1px;font-size:13px;}
+
+/* Sublinhado que se desenha sob o destaque do título */
+.hero-h1 em{background:linear-gradient(90deg,var(--laranja-vv),#f5c040) no-repeat 0 96%/0% .07em;-webkit-box-decoration-break:clone;box-decoration-break:clone;animation:drawLine 1.1s 1.4s cubic-bezier(.16,1,.3,1) forwards;}
+@keyframes drawLine{to{background-size:100% .07em;}}
+
+/* Garantias logo abaixo dos botões */
+.hero-trust{list-style:none;display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:28px;opacity:0;animation:fadeUp .9s 1.1s ease forwards;}
+.hero-trust li{display:flex;align-items:center;gap:7px;font-size:13px;color:rgba(255,255,255,.75);}
+.hero-trust svg{color:#5fd068;flex-shrink:0;}
+
+/* Indicador de rolagem */
+.hero-scroll{position:absolute;left:50%;bottom:28px;z-index:3;width:26px;height:42px;margin-left:-13px;border:2px solid rgba(255,255,255,.4);border-radius:14px;opacity:0;animation:fadeUp .8s 1.6s ease forwards;}
+.hero-scroll span{position:absolute;top:8px;left:50%;width:4px;height:8px;margin-left:-2px;border-radius:2px;background:#fff;animation:scrollDot 1.8s ease-in-out infinite;}
+@keyframes scrollDot{0%{opacity:0;transform:translateY(0);}30%{opacity:1;}100%{opacity:0;transform:translateY(14px);}}
+@media(max-height:700px),(max-width:480px){.hero-scroll{display:none;}}
+
+/* Botão principal: brilho que atravessa no hover */
+.btn-prim{position:relative;overflow:hidden;}
+.btn-prim::after{content:'';position:absolute;top:0;left:-75%;width:50%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-20deg);pointer-events:none;}
+.btn-prim:hover::after{animation:shine .8s ease;}
+@keyframes shine{to{left:130%;}}
+
+/* ── Faixa de números (logo após o hero) ── */
+.trust{background:var(--verde-esc);margin-top:0;position:relative;}
+.trust-inner{padding:8px 48px 64px;}
+.trust-in{box-shadow:0 20px 60px rgba(0,0,0,.25);}
+.t-item{padding:30px 22px;}
+.t-item strong{font-family:'Lora',serif;font-size:19px;}
+.t-icon{transition:transform .4s cubic-bezier(.16,1,.3,1),background .3s;}
+.t-item:hover .t-icon{transform:translateY(-3px) rotate(-6deg);background:rgba(204,85,0,.32);}
+@media(max-width:700px){.trust-inner{padding:4px 16px 44px;}.t-item{padding:22px 14px;}.t-item strong{font-size:16px;}}
+@media(max-width:420px){.trust-in{grid-template-columns:1fr 1fr;}.t-item span{font-size:11px;}}
+
+/* ── Rótulos de seção: traço que cresce ao aparecer ── */
+.rev .label::before,.rev-l .label::before,.rev-r .label::before{width:0;transition:width .7s .25s cubic-bezier(.16,1,.3,1);}
+.rev.in .label::before,.rev-l.in .label::before,.rev-r.in .label::before{width:18px;}
+
+/* ── Cards: a foto "abre" de baixo para cima ao entrar na tela ── */
+.pcard.rev .pcard-img,.tcard.rev .tcard-cover{clip-path:inset(0 0 100% 0 round 0);transition:clip-path 1s .15s cubic-bezier(.16,1,.3,1);}
+.pcard.rev.in .pcard-img,.tcard.rev.in .tcard-cover{clip-path:inset(0 0 0 0 round 0);}
+.pcard,.tcard{will-change:transform;}
+.pcard:hover,.tcard:hover{border-color:rgba(204,85,0,.25);}
+
+/* Diferenciais: ícone ganha cor no hover */
+.dif-ico{transition:background .3s,color .3s,transform .4s cubic-bezier(.16,1,.3,1);}
+.dif:hover .dif-ico{background:var(--laranja);color:#fff;transform:scale(1.08) rotate(-4deg);}
+.dif{position:relative;overflow:hidden;}
+.dif::after{content:'';position:absolute;left:0;bottom:0;height:3px;width:100%;background:linear-gradient(90deg,var(--laranja),#f5c040);transform:scaleX(0);transform-origin:left;transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.dif:hover::after{transform:scaleX(1);}
+
+/* Selo do Google nas avaliações */
+.sec-head.c .google-badge{margin-top:22px;}
+
+/* ── Barra fixa de reserva (celular) ── */
+.cta-bar{position:fixed;left:12px;right:12px;bottom:12px;z-index:450;display:none;align-items:center;gap:12px;padding:10px 10px 10px 16px;border-radius:16px;background:rgba(14,34,14,.94);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 10px 40px rgba(0,0,0,.35);transform:translateY(140%);transition:transform .5s cubic-bezier(.16,1,.3,1);}
+.cta-bar.show{transform:none;}
+.cta-bar-txt{flex:1;min-width:0;line-height:1.3;}
+.cta-bar-txt strong{display:block;font-size:13.5px;color:#fff;}
+.cta-bar-txt span{font-size:11.5px;color:rgba(255,255,255,.6);}
+.cta-bar-btn{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;background:#25d366;color:#fff;font-size:14px;font-weight:700;padding:11px 16px;border-radius:12px;box-shadow:0 4px 16px rgba(37,211,102,.35);}
+@media(max-width:768px){
+  .cta-bar{display:flex;}
+  body.has-cta-bar .f-wa{display:none;}
+  body.has-cta-bar .footer{padding-bottom:96px;}
+}
+
+/* ── Acessibilidade: foco visível e menos movimento ── */
+a:focus-visible,button:focus-visible{outline:3px solid #f5c040;outline-offset:3px;border-radius:6px;}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important;transition-delay:0s !important;scroll-behavior:auto !important;}
+  .rev,.rev-l,.rev-r{opacity:1;transform:none;}
+}

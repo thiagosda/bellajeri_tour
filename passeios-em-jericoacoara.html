@@ -11,7 +11,7 @@
   </script>
 
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <title>Passeios em Jericoacoara | Buggy, Quadriciclo e 4x4</title>
   <meta name="description" content="Conheça os principais passeios em Jericoacoara com a BellaJeri Tour: Leste, Oeste, Barrinha, buggy, quadriciclo e 4x4." />
   <meta name="robots" content="index, follow" />
@@ -99,7 +99,7 @@
         <a href="/passeio-barrinha-jericoacoara">Barrinha</a>
         <a href="/#faq">FAQ</a>
       </div>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -389,22 +389,6 @@
   <script src="js/script.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
   <script defer src="/_vercel/speed-insights/script.js"></script>
-  <script>
-  function gtag_report_conversion(url) {
-    var callback = function () { if (typeof(url) != 'undefined') { window.location = url; } };
-    gtag('event', 'conversion', { 'send_to': 'AW-18276743148/xEvECN7n0MYcEOzvg4tE', 'event_callback': callback });
-    return false;
-  }
-  document.addEventListener('click', function(e) {
-    var link = e.target.closest('a');
-    if (!link) return;
-    var href = link.href || '';
-    if (href.includes('wa.me') || href.includes('api.whatsapp.com') || href.includes('web.whatsapp.com')) {
-      e.preventDefault();
-      gtag_report_conversion(href);
-    }
-  });
-  </script>
 
   <!-- Meta Pixel — WhatsApp Click Tracking -->
   <script>

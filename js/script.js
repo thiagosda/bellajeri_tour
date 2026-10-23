@@ -27,6 +27,58 @@ function closeMenu(){
   burger.classList.remove('open');
 }
 
+// ── BARRA DE PROGRESSO DE LEITURA ──
+(function(){
+  var bar=document.createElement('div');
+  bar.className='scroll-prog';
+  bar.setAttribute('aria-hidden','true');
+  document.body.appendChild(bar);
+  var pending=false;
+  function update(){
+    var max=document.documentElement.scrollHeight-window.innerHeight;
+    bar.style.transform='scaleX('+(max>0?Math.min(window.scrollY/max,1):0)+')';
+    pending=false;
+  }
+  window.addEventListener('scroll',function(){if(!pending){pending=true;requestAnimationFrame(update);}},{passive:true});
+  update();
+})();
+
+// ── BARRA FIXA DE RESERVA (celular) ──
+// Usa a mesma mensagem do botão flutuante da página, para cada página manter seu texto.
+(function(){
+  var wa=document.querySelector('.f-wa');
+  if(!wa)return;
+  var bar=document.createElement('div');
+  bar.className='cta-bar';
+  bar.innerHTML='<div class="cta-bar-txt"><strong>Planeje sua viagem a Jeri</strong><span>Resposta rápida das 7h às 21h</span></div>'+
+    '<a class="cta-bar-btn" target="_blank" rel="noopener">'+wa.innerHTML+' WhatsApp</a>';
+  bar.querySelector('a').href=wa.href;
+  document.body.appendChild(bar);
+  document.body.classList.add('has-cta-bar');
+  var hero=document.querySelector('.hero,.page-hero');
+  var footer=document.querySelector('.footer');
+  var pastHero=!hero, atFooter=false;
+  function sync(){bar.classList.toggle('show',pastHero&&!atFooter);}
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){
+      if(e.target===hero)pastHero=!e.isIntersecting;
+      if(e.target===footer)atFooter=e.isIntersecting;
+    });
+    sync();
+  });
+  if(hero)obs.observe(hero);
+  if(footer)obs.observe(footer);
+  sync();
+})();
+
+// ── ENTRADA EM CASCATA (cards de um mesmo grid aparecem um após o outro) ──
+document.querySelectorAll('.cards,.difs,.tgrid,.trust-in,.pontos-grid,.related-grid').forEach(function(grid){
+  var i=0;
+  Array.prototype.forEach.call(grid.children,function(el){
+    if(el.classList.contains('rev')){el.style.transitionDelay=(i++%4)*0.09+'s';}
+  });
+});
+
 // ── SCROLL REVEAL (IntersectionObserver) ──
 var io=new IntersectionObserver(function(entries){
   var appearing = entries.filter(function(e){ return e.isIntersecting; });
@@ -34,6 +86,8 @@ var io=new IntersectionObserver(function(entries){
     var el = e.target;
     el.classList.add('in');
     io.unobserve(el);
+    // Limpa o atraso da cascata depois da entrada, para o hover responder na hora
+    if(el.style.transitionDelay){ setTimeout(function(){ el.style.transitionDelay=''; }, 1400); }
   });
 },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
 document.querySelectorAll('.rev,.rev-l,.rev-r').forEach(function(el){io.observe(el);});
@@ -115,7 +169,8 @@ if(window.innerWidth>768){
         var y=window.scrollY;
         // Hero Parallax
         if(heroImg && y<window.innerHeight){
-          heroImg.style.transform='scale(1.08) translateY('+y*0.15+'px)';
+          // "translate" separado para não brigar com o zoom lento (animation em transform)
+          heroImg.style.translate='0 '+y*0.15+'px';
         }
         // Frota Parallax
         if(frotaImg){
@@ -199,7 +254,7 @@ if(window.innerWidth>768){
 })();
 
 
-// ── VÍDEO KITESURF — NUNCA PARA ──
+// ── VÍDEO KITESURF — carrega só perto da tela, toca enquanto visível ──
 (function(){
   function initKitesurfVideo(){
     var vid = document.querySelector('.ativ-local-video');
@@ -208,44 +263,28 @@ if(window.innerWidth>768){
     // Garante atributos essenciais
     vid.muted    = true;
     vid.loop     = true;
-    vid.autoplay = true;
     vid.playsInline = true;
 
-    // Tenta dar play imediatamente
     function forcePlay(){
       var p = vid.play();
       if(p && typeof p.catch === 'function'){
-        p.catch(function(){ /* bloqueado pelo browser — IntersectionObserver vai resolver */ });
+        p.catch(function(){ /* bloqueado pelo browser — fica no poster */ });
       }
     }
-    forcePlay();
 
-    // Se pausou por qualquer motivo → relança
-    vid.addEventListener('pause', function(){
-      setTimeout(forcePlay, 50);
-    });
-
-    // Backup: quando o loop termina e o browser não retoma
-    vid.addEventListener('ended', function(){
-      vid.currentTime = 0;
-      forcePlay();
-    });
-
-    // Quando o vídeo volta a aparecer na tela → retoma play
+    // O arquivo é pesado: só baixa quando o card chega perto da tela.
+    // Fora da tela, pausa para não gastar bateria/dados.
     var visObs = new IntersectionObserver(function(entries){
       entries.forEach(function(e){
-        if(e.isIntersecting && vid.paused) forcePlay();
+        if(e.isIntersecting){
+          if(!vid.getAttribute('src') && vid.dataset.src){ vid.src = vid.dataset.src; }
+          forcePlay();
+        } else if(!vid.paused){
+          vid.pause();
+        }
       });
-    }, {threshold: 0.1});
+    }, {rootMargin: '200px 0px'});
     visObs.observe(vid);
-
-    // Retry por 3 segundos caso o autoplay tenha sido bloqueado no carregamento
-    var retryCount = 0;
-    var retryTimer = setInterval(function(){
-      if(retryCount++ > 10){ clearInterval(retryTimer); return; }
-      if(vid.paused) forcePlay();
-      else clearInterval(retryTimer);
-    }, 300);
   }
 
   // Roda depois do DOM estar pronto
@@ -259,32 +298,21 @@ if(window.innerWidth>768){
 // ── GOOGLE ADS — Evento de conversão Lead WhatsApp ──
 // Dispara somente em cliques em links de WhatsApp (wa.me / api.whatsapp.com / web.whatsapp.com).
 // Não duplica a tag principal AW-18276743148, que já está no <head>.
-function gtag_report_conversion(url) {
-  var callback = function () {
-    if (typeof(url) != 'undefined') {
-      window.location = url;
-    }
-  };
-  gtag('event', 'conversion', {
-      'send_to': 'AW-18276743148/xEvECN7n0MYcEOzvg4tE',
-      'event_callback': callback
-  });
-  return false;
-}
-
+// O clique segue normalmente (nova aba); o evento vai por beacon, então não depende
+// do gtag.js carregar — antes, com bloqueador de anúncios, o botão não abria nada.
 document.addEventListener('click', function(e) {
   var link = e.target.closest('a');
-
   if (!link) return;
-
   var href = link.href || '';
-
   if (
-    href.includes('wa.me') ||
+    (href.includes('wa.me') ||
     href.includes('api.whatsapp.com') ||
-    href.includes('web.whatsapp.com')
+    href.includes('web.whatsapp.com')) &&
+    typeof gtag === 'function'
   ) {
-    e.preventDefault();
-    gtag_report_conversion(href);
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18276743148/xEvECN7n0MYcEOzvg4tE',
+      'transport_type': 'beacon'
+    });
   }
 });

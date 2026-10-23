@@ -12,7 +12,7 @@
     gtag('config', 'AW-18276743148');
   </script>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 
   <title>Transfer e Passeios em Jericoacoara | BellaJeri Tour</title>
   <meta name="description" content="Reserve transfer Fortaleza para Jericoacoara e passeios Leste, Oeste e Barrinha com buggy, quadriciclo ou 4x4. Atendimento direto pelo WhatsApp." />
@@ -110,6 +110,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preload" as="image" href="imagens/pedra-furada.webp" type="image/webp" />
   <link rel="icon" type="image/x-icon" href="favicon.ico" />
   <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32.webp" />
   <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16.webp" />
@@ -159,7 +160,7 @@
 
   <nav class="nav" id="nav">
     <div class="nav-in">
-      <a href="#" class="nav-logo"><img src="imagens/bella_jeri_logo.svg" alt="Bella Jeri Tour"  /></a>
+      <a href="/" class="nav-logo"><img src="imagens/bella_jeri_logo.svg" alt="Bella Jeri Tour"  /></a>
       <div class="nav-links">
         <a href="/transfer-fortaleza-jericoacoara">Transfer</a>
         <a href="/passeios-em-jericoacoara">Passeios</a>
@@ -169,7 +170,7 @@
         <a href="#hospedagem">Hospedagem</a>
         <a href="#faq">FAQ</a>
       </div>
-      <button class="burger" id="burger"><span></span><span></span><span></span></button>
+      <button class="burger" id="burger" aria-label="Abrir menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
 
@@ -179,6 +180,10 @@
     <div class="hero-fade"></div>
     <div class="hero-body">
 
+      <a href="https://maps.app.goo.gl/P4reX7EVpGpVALyJA" target="_blank" rel="noopener" class="hero-pill">
+        <span class="hero-pill-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+        <span><strong>5,0</strong> no Google &middot; 11 avalia&ccedil;&otilde;es</span>
+      </a>
       <h1 class="hero-h1">Passeios, transfer e rotas<br>em <em>Jericoacoara e regi&atilde;o</em></h1>
       <p class="hero-sub">Atendimento local para quem quer conhecer Jeri com praticidade, conforto e experi&ecirc;ncia
         4x4. Roteiros completos, ve&iacute;culos preparados e reserva direta pelo WhatsApp.</p>
@@ -192,6 +197,39 @@
             <path
               d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z" />
           </svg> Falar no WhatsApp</a>
+      </div>
+      <ul class="hero-trust">
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg> Reembolso integral at&eacute; 24h antes</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg> Pix ou cart&atilde;o</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12" /></svg> Resposta r&aacute;pida, 7h &agrave;s 21h</li>
+      </ul>
+    </div>
+    <a href="#numeros" class="hero-scroll" aria-label="Rolar para baixo"><span></span></a>
+  </section>
+
+  <section class="trust" id="numeros">
+    <div class="trust-inner">
+      <div class="trust-in">
+        <div class="t-item rev">
+          <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg></div>
+          <strong><span class="count-up" data-target="10" data-suffix="">0</span>+ anos</strong>
+          <span>de experi&ecirc;ncia com turismo em Jericoacoara</span>
+        </div>
+        <div class="t-item rev">
+          <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z" /></svg></div>
+          <strong>5,0 no Google</strong>
+          <span>nota m&aacute;xima nas avalia&ccedil;&otilde;es de clientes</span>
+        </div>
+        <div class="t-item rev">
+          <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /><path d="M9 12l2 2 4-4" /></svg></div>
+          <strong>Ve&iacute;culos credenciados</strong>
+          <span>Hilux, SW4, Buggy e Quadriciclo revisados</span>
+        </div>
+        <div class="t-item rev">
+          <div class="t-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg></div>
+          <strong>Atendimento humano</strong>
+          <span>direto no WhatsApp, sem rob&ocirc; e sem intermedi&aacute;rio</span>
+        </div>
       </div>
     </div>
   </section>
@@ -576,7 +614,7 @@
           </div>
         </div>
         <div class="tcard rev">
-          <div class="tcard-cover"><img src="imagens/FortalezaJeriPraia.webp" loading="lazy" />
+          <div class="tcard-cover"><img src="imagens/FortalezaJeriPraia.webp" alt="Transfer Fortaleza para Jericoacoara pelas praias" loading="lazy" />
             <div class="tcard-cover-ov"></div>
             <div class="tcard-route-bar"><span class="tcard-route-pt">FOR</span>
               <div class="tcard-route-line"></div><span class="tcard-route-pt">JERI</span>
@@ -720,7 +758,7 @@
       <div class="ativ-pair">
         <div class="ativ-card-big rev">
           <div class="ativ-card-img ativ-video-wrap">
-            <video class="ativ-local-video" src="videos/kitesurf.mp4" autoplay muted loop playsinline preload="auto"
+            <video class="ativ-local-video" data-src="videos/kitesurf.mp4" muted loop playsinline preload="none"
               poster="imagens/kitesurfing.webp"></video>
             <div class="ativ-card-overlay">
               <div class="ativ-card-tag">Esporte aqu&aacute;tico</div>
@@ -746,6 +784,12 @@
         <div class="label">Avalia&ccedil;&otilde;es</div>
         <h2 class="sec-h">Quem foi, aprovou</h2>
         <p class="sec-sub">Clientes que confiaram na Bella Jeri Tour para viver Jericoacoara de verdade.</p>
+        <a href="https://maps.app.goo.gl/P4reX7EVpGpVALyJA" target="_blank" rel="noopener" class="google-badge">
+          <svg width="18" height="18" viewBox="0 0 24 24" aria-hidden="true"><path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/><path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/><path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z" fill="#FBBC05"/><path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/></svg>
+          <span class="gbadge-score">5,0</span>
+          <span class="gbadge-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+          <span class="gbadge-count">11 avalia&ccedil;&otilde;es &middot; ver no Google</span>
+        </a>
       </div>
       <div class="deps-wrap">
         <button class="deps-nav deps-prev" aria-label="Anterior" onclick="depScroll(-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg></button>
@@ -760,7 +804,7 @@
               <div class="dep-av" style="background:#00897b">AG</div>
               <div>
                 <div class="dep-name">Antonia Gabriele Veras Carvalho</div>
-                <div class="dep-loc">5 dias atr&aacute;s &middot; <span class="dep-g-badge">Google</span></div>
+                <div class="dep-loc">Avaliação no <span class="dep-g-badge">Google</span></div>
               </div>
             </div>
           </a>
@@ -774,7 +818,7 @@
               <div class="dep-av" style="background:#1976d2">TA</div>
               <div>
                 <div class="dep-name">Thiago Araujo</div>
-                <div class="dep-loc">2 semanas atr&aacute;s &middot; <span class="dep-g-badge">Google</span></div>
+                <div class="dep-loc">Avaliação no <span class="dep-g-badge">Google</span></div>
               </div>
             </div>
           </a>
@@ -788,7 +832,7 @@
               <div class="dep-av" style="background:#8e24aa">MF</div>
               <div>
                 <div class="dep-name">Marjore Freitas</div>
-                <div class="dep-loc">2 semanas atr&aacute;s &middot; <span class="dep-g-badge">Google</span></div>
+                <div class="dep-loc">Avaliação no <span class="dep-g-badge">Google</span></div>
               </div>
             </div>
           </a>
@@ -802,7 +846,7 @@
               <div class="dep-av" style="background:#e65100">PS</div>
               <div>
                 <div class="dep-name">Pedro Silva</div>
-                <div class="dep-loc">6 dias atr&aacute;s &middot; <span class="dep-g-badge">Google</span></div>
+                <div class="dep-loc">Avaliação no <span class="dep-g-badge">Google</span></div>
               </div>
             </div>
           </a>
@@ -816,7 +860,7 @@
               <div class="dep-av" style="background:#2e7d32">GR</div>
               <div>
                 <div class="dep-name">Giovane Rodrigues</div>
-                <div class="dep-loc">5 dias atr&aacute;s &middot; <span class="dep-g-badge">Google</span></div>
+                <div class="dep-loc">Avaliação no <span class="dep-g-badge">Google</span></div>
               </div>
             </div>
           </a>
